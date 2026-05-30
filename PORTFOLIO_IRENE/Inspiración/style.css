@@ -15,19 +15,21 @@
     --color-verde-lima: #E2FF9E;
     --color-fondo: #070B14;
     --color-tarjeta: #0F0A1E;
+    --color-beige: #F5F0E8;
+    --color-negro-texto: #0a0a0a;
 }
 
 /* BASE: tipografía y fondo por defecto */
 body {
     font-family: 'Syne', sans-serif;
-    background-color: var(--color-fondo);
-    color: white;
+    background-color: var(--color-beige);
+    color: var(--color-negro-texto);
 }
 
 /* PÁGINA PRINCIPAL*/
 .pagina-principal {
     min-height: 100vh;
-    background-color: var(--color-fondo);
+    background-color: var(--color-beige);
     padding: 24px 48px 48px;
     display: flex;
     flex-direction: column;
@@ -45,7 +47,7 @@ body {
     font-size: 8.5vw;
     font-weight: 400;
     line-height: 0.9;
-    color: white;
+    color: var(--color-negro-texto);
     font-family: 'Syne', sans-serif;
     white-space: nowrap;
 }
@@ -61,7 +63,7 @@ body {
 }
 
 .letra-lima {
-    color: var(--color-verde-lima);
+    color: var(--color-naranja);
 }
 
 /* Fila de contacto bajo el título */
@@ -80,18 +82,18 @@ body {
 .hero-principal-frase {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: white;
+    color: var(--color-negro-texto);
 }
 
 .hero-principal-email {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: white;
+    color: var(--color-negro-texto);
     text-decoration: none;
 }
 
 .hero-principal-email:hover {
-    color: var(--color-verde-lima);
+    color: var(--color-naranja);
 }
 
 .hero-principal-derecha {
@@ -104,13 +106,13 @@ body {
 .hero-principal-social {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: white;
+    color: var(--color-negro-texto);
     text-decoration: none;
     font-weight: 700;
 }
 
 .hero-principal-social:hover {
-    color: var(--color-verde-lima);
+    color: var(--color-naranja);
 }
 
 /* Grid de proyectos : dos columnas */
@@ -125,7 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background-color: var(--color-tarjeta);
+    background-color: var(--color-negro-texto);
     border-radius: 24px;
     padding: 16px;
 }
@@ -186,12 +188,12 @@ body {
 }
 
 .proyecto-card-link:hover {
-    color: var(--color-verde-lima);
+    color: var(--color-naranja);
 }
 
 .proyecto-card-link:hover .proyecto-card-link-circulo {
-    border-color: var(--color-verde-lima);
-    color: var(--color-verde-lima);
+    border-color: var(--color-naranja);
+    color: var(--color-naranja);
 }
 
 /* About me */
