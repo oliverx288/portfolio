@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* VARIABLES - raíz*/
+/* VARIABLES - raíz */
 :root {
     --color-verde: #1E4D3A;
     --color-rosa: #F2809A;
@@ -13,8 +13,8 @@
     --color-rojo: #D42B2B;
     --color-naranja: #E8763A;
     --color-verde-lima: #E2FF9E;
-    --color-fondo: #070B14;
-    --color-tarjeta: #0F0A1E;
+    --color-fondo: #0D1B2A;
+    --color-tarjeta: #0a0a0a;
     --color-beige: #F5F0E8;
     --color-negro-texto: #0a0a0a;
 }
@@ -22,32 +22,32 @@
 /* BASE: tipografía y fondo por defecto */
 body {
     font-family: 'Syne', sans-serif;
-    background-color: var(--color-beige);
-    color: var(--color-negro-texto);
+    background-color: var(--color-fondo);
+    color: var(--color-beige);
 }
 
-/* PÁGINA PRINCIPAL*/
+/* PÁGINA PRINCIPAL */
 .pagina-principal {
     min-height: 100vh;
-    background-color: var(--color-beige);
-    padding: 24px 48px 48px;
+    background-color: var(--color-fondo);
+    padding: 8px 48px 48px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 15px;
 }
 
 /* Hero — título grande y datos de contacto */
 .hero-principal {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
 }
 
 .hero-principal-titulo {
     font-size: 8.5vw;
     font-weight: 400;
     line-height: 0.9;
-    color: var(--color-negro-texto);
+    color: var(--color-beige);
     font-family: 'Syne', sans-serif;
     white-space: nowrap;
 }
@@ -63,63 +63,75 @@ body {
 }
 
 .letra-lima {
-    color: var(--color-naranja);
+    color: var(--color-verde-lima);
 }
 
 /* Fila de contacto bajo el título */
 .hero-principal-info {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
 }
 
-.hero-principal-izquierda {
+/* Centro — based in barcelona */
+.hero-principal-centro {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-principal-frase {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: var(--color-negro-texto);
+    color: var(--color-beige);
 }
 
-.hero-principal-email {
-    font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
-    color: var(--color-negro-texto);
-    text-decoration: none;
-}
-
-.hero-principal-email:hover {
-    color: var(--color-naranja);
-}
-
+/* Derecha — Github, LinkedIn y Email */
 .hero-principal-derecha {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     gap: 4px;
+    position: absolute;
+    right: 0;
 }
 
 .hero-principal-social {
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'DM Sans', sans-serif;
     color: var(--color-negro-texto);
     text-decoration: none;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-verde-lima);
+    padding: 8px 12px;
 }
 
 .hero-principal-social:hover {
-    color: var(--color-naranja);
+    background-color: #4CAF7D;
+    color: var(--color-negro-texto);
+}
+
+/* Label PROJECTS */
+.proyectos-label {
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 0.9;
+    color: var(--color-beige);
+    font-family: 'Syne', sans-serif;
+    margin-top: -40px;
 }
 
 /* Grid de proyectos : dos columnas */
 .proyectos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 10px;
 }
 
 /* Tarjeta de proyecto */
@@ -127,9 +139,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    background-color: var(--color-negro-texto);
+    background: radial-gradient(circle at top right, rgba(226,255,158,0.15) 0%, #0a0a0a 60%);
     border-radius: 24px;
     padding: 16px;
+    overflow: hidden;
+    transition: background 0.3s ease;
 }
 
 .proyecto-card-imagen {
@@ -137,6 +151,7 @@ body {
     height: 400px;
     object-fit: contain;
     border-radius: 16px;
+    display: block;
 }
 
 .proyecto-card-info {
@@ -176,24 +191,13 @@ body {
     gap: 8px;
 }
 
-.proyecto-card-link-circulo {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-
 .proyecto-card-link:hover {
-    color: var(--color-naranja);
+    color: var(--color-verde-lima);
 }
 
 .proyecto-card-link:hover .proyecto-card-link-circulo {
-    border-color: var(--color-naranja);
-    color: var(--color-naranja);
+    border-color: var(--color-verde-lima);
+    color: var(--color-verde-lima);
 }
 
 /* About me */
