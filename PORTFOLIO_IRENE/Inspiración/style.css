@@ -22,14 +22,14 @@
 /* BASE: tipografía y fondo por defecto */
 body {
     font-family: 'Syne', sans-serif;
-    background-color: var(--color-fondo);
+    background-color:#112240;
     color: var(--color-beige);
 }
 
 /* PÁGINA PRINCIPAL */
 .pagina-principal {
     min-height: 100vh;
-    background-color: var(--color-fondo);
+    background-color: #112240;
     padding: 8px 48px 48px;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ body {
     font-size: 8.5vw;
     font-weight: 400;
     line-height: 0.9;
-    color: var(--color-beige);
+    color: rgba(245, 240, 232, 0.9);
     font-family: 'Syne', sans-serif;
     white-space: nowrap;
 }
@@ -74,22 +74,23 @@ body {
     position: relative;
 }
 
-/* Centro — based in barcelona */
+/* Centro  "based in barcelona" */
 .hero-principal-centro {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
     align-items: center;
     text-align: center;
+    color: rgba(245, 240, 232, 0.9);
 }
 
 .hero-principal-frase {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: var(--color-beige);
+    color: rgba(245, 240, 232, 0.9);
 }
 
-/* Derecha — Github, LinkedIn y Email */
+/* Derecha: Github, LinkedIn y Email */
 .hero-principal-derecha {
     display: flex;
     flex-direction: row;
@@ -141,14 +142,18 @@ body {
     gap: 16px;
     background: radial-gradient(circle at top right, rgba(226,255,158,0.15) 0%, #0a0a0a 60%);
     border-radius: 24px;
-    padding: 16px;
+    padding: 10px;
     overflow: hidden;
     transition: background 0.3s ease;
 }
 
+.proyecto-card-placeholder {
+    display: block;
+}
+
 .proyecto-card-imagen {
     width: 100%;
-    height: 400px;
+    height: 250px;
     object-fit: contain;
     border-radius: 16px;
     display: block;
@@ -161,16 +166,16 @@ body {
 }
 
 .proyecto-card-titulo {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: rgba(245, 240, 232, 0.9);
 }
 
 .proyecto-card-desc {
-    font-size: 16px;
+    font-size: 13px;
     font-family: 'DM Sans', sans-serif;
-    color: white;
+    color: rgba(245, 240, 232, 0.6);
     line-height: 1.5;
 }
 
@@ -183,7 +188,7 @@ body {
 .proyecto-card-link {
     font-size: 14px;
     font-family: 'DM Sans', sans-serif;
-    color: white;
+    color: rgba(245, 240, 232, 0.9);
     text-decoration: none;
     font-weight: 700;
     display: flex;

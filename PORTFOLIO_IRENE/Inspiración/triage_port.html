@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriPage — Irene Oliver</title>
+    <link rel="stylesheet" href="tripage_detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="detalle-header">
+        <a href="index.html" class="detalle-volver">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </header>
+
+    <main class="detalle-main">
+
+        <!-- HERO — izquierda datos, derecha código -->
+        <section class="detalle-hero">
+            <div class="detalle-hero-izquierda">
+                <h1 class="detalle-titulo">TriPage</h1>
+                <div class="detalle-tags">
+                    <span><i class="fab fa-html5"></i></span>
+                    <span><i class="fab fa-css3-alt"></i></span>
+                    <span><i class="fab fa-js"></i></span>
+                </div>
+                <p class="detalle-datos-contexto">A study conducted across 7 hospitals in Asturias found that 1 in 10 triage classifications are incorrect. Even the most experienced nurses make mistakes. The research revealed that years of practice have little correlation with accuracy, but simulation based training does.</p>
+                <div class="detalle-datos-grid">
+                    <div class="detalle-dato">
+                        <span class="detalle-dato-numero">10.1%</span>
+                        <span class="detalle-dato-label">Patients classified as less serious than they actually were</span>
+                    </div>
+                    <div class="detalle-dato">
+                        <span class="detalle-dato-numero">6.3%</span>
+                        <span class="detalle-dato-label">Patients classified as more serious than they actually were</span>
+                    </div>
+                    <div class="detalle-dato">
+                        <span class="detalle-dato-numero">80%</span>
+                        <span class="detalle-dato-label">Triage classifications that were correct</span>
+                    </div>
+                    <div class="detalle-dato">
+                        <span class="detalle-dato-numero">100</span>
+                        <span class="detalle-dato-label">Nurses who took part in the study across 7 hospitals</span>
+                    </div>
+                </div>
+                <a href="https://www.sciencedirect.com/science/article/pii/S1130862126000033" target="_blank" class="detalle-fuente">
+                    READ THE FULL STUDY
+                </a>
+            </div>
+            <div class="detalle-hero-derecha">
+                <img src="code_manchester.png" alt="Manchester colour system code" class="detalle-codigo-img">
+                <p class="detalle-codigo-caption">Manchester colour system. CSS variables used to define the 5 triage levels</p>
+            </div>
+        </section>
+
+        <!-- IMAGEN PRINCIPAL -->
+        <section class="detalle-imagen-principal">
+            <img src="macfoto_buena.png" alt="TriPage on laptop" class="detalle-img">
+        </section>
+
+        <!-- WHY I BUILT THIS -->
+        <section class="detalle-seccion">
+            <p class="detalle-seccion-label">Why I built this</p>
+            <p class="detalle-seccion-texto">Before coding I studied nursing. I saw firsthand what happens in an emergency department during a mass casualty event or when the service is overwhelmed. The Manchester Triage System is what decides who gets care first — and getting it wrong has real consequences. No free web-based tool existed to practice it.</p>
+        </section>
+
+        <!-- THE PROCESS -->
+        <section class="detalle-seccion">
+            <p class="detalle-seccion-label">The process</p>
+            <p class="detalle-seccion-texto">I started on paper. I considered flashcards, random cases, categorising by clinical type — cardiovascular, trauma, neurological. But categorising by type gave hints away. In real emergency departments you don't know what's coming. I decided to filter by difficulty instead. I spoke with medicine students at Universitat Pompeu Fabra — they confirmed nothing like this exists and it would help them prepare for the ECOE exam.</p>
+        </section>
+
+        <!-- CAPTURAS -->
+        <section class="detalle-capturas">
+            <img src="tri_page3.png" alt="TriPage screen 1" class="detalle-captura">
+            <img src="tri_page2.png" alt="TriPage screen 2" class="detalle-captura">
+        </section>
+
+        <!-- CURRENT STATUS -->
+        <section class="detalle-seccion">
+            <p class="detalle-seccion-label">Current status</p>
+            <p class="detalle-seccion-texto">Currently in validation with medicine students at Universitat Pompeu Fabra. JavaScript logic is pending implementation — design and all 10 clinical cases are complete.</p>
+        </section>
+
+        <!-- LINKS -->
+        <section class="detalle-links">
+            <a href="https://github.com/oliverx288/tripage" target="_blank" class="detalle-link-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="detalle-link-btn">
+                <i class="fas fa-external-link-alt"></i> Live demo
+            </a>
+        </section>
+    </main>
+</body>
+</html>
