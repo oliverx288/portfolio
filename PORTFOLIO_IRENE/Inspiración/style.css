@@ -13,199 +13,20 @@
     --color-rojo: #D42B2B;
     --color-naranja: #E8763A;
     --color-verde-lima: #E2FF9E;
-    --color-fondo: #0D1B2A;
+    --color-fondo: #112240;
     --color-tarjeta: #0a0a0a;
     --color-beige: #F5F0E8;
     --color-negro-texto: #0a0a0a;
 }
 
-/* BASE: tipografía y fondo por defecto */
+/* BASE */
 body {
     font-family: 'Syne', sans-serif;
-    background-color:#112240;
+    background-color: var(--color-fondo);
     color: var(--color-beige);
 }
 
-/* PÁGINA PRINCIPAL */
-.pagina-principal {
-    min-height: 100vh;
-    background-color: #112240;
-    padding: 8px 48px 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Hero — título grande y datos de contacto */
-.hero-principal {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hero-principal-titulo {
-    font-size: 8.5vw;
-    font-weight: 400;
-    line-height: 0.9;
-    color: rgba(245, 240, 232, 0.9);
-    font-family: 'Syne', sans-serif;
-    white-space: nowrap;
-}
-
-/* Las O itálicas del título */
-.letra-italica {
-    font-style: italic;
-}
-
-.letra-italica-izquierda {
-    display: inline-block;
-    transform: skewX(15deg);
-}
-
-.letra-lima {
-    color: var(--color-verde-lima);
-}
-
-/* Fila de contacto bajo el título */
-.hero-principal-info {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-}
-
-/* Centro  "based in barcelona" */
-.hero-principal-centro {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    color: rgba(245, 240, 232, 0.9);
-}
-
-.hero-principal-frase {
-    font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
-    color: rgba(245, 240, 232, 0.9);
-}
-
-/* Derecha: Github, LinkedIn y Email */
-.hero-principal-derecha {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    position: absolute;
-    right: 0;
-}
-
-.hero-principal-social {
-    font-size: 15px;
-    font-family: 'DM Sans', sans-serif;
-    color: var(--color-negro-texto);
-    text-decoration: none;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--color-verde-lima);
-    padding: 8px 12px;
-}
-
-.hero-principal-social:hover {
-    background-color: #4CAF7D;
-    color: var(--color-negro-texto);
-}
-
-/* Label PROJECTS */
-.proyectos-label {
-    font-size: 5vw;
-    font-weight: 400;
-    line-height: 0.9;
-    color: var(--color-beige);
-    font-family: 'Syne', sans-serif;
-    margin-top: -40px;
-}
-
-/* Grid de proyectos : dos columnas */
-.proyectos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-/* Tarjeta de proyecto */
-.proyecto-card {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: radial-gradient(circle at top right, rgba(226,255,158,0.15) 0%, #0a0a0a 60%);
-    border-radius: 24px;
-    padding: 10px;
-    overflow: hidden;
-    transition: background 0.3s ease;
-}
-
-.proyecto-card-placeholder {
-    display: block;
-}
-
-.proyecto-card-imagen {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    border-radius: 16px;
-    display: block;
-}
-
-.proyecto-card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.proyecto-card-titulo {
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    color: rgba(245, 240, 232, 0.9);
-}
-
-.proyecto-card-desc {
-    font-size: 13px;
-    font-family: 'DM Sans', sans-serif;
-    color: rgba(245, 240, 232, 0.6);
-    line-height: 1.5;
-}
-
-.proyecto-card-footer {
-    display: flex;
-    align-items: center;
-}
-
-/* Link VIEW PROJECT con círculo */
-.proyecto-card-link {
-    font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
-    color: rgba(245, 240, 232, 0.9);
-    text-decoration: none;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.proyecto-card-link:hover {
-    color: var(--color-verde-lima);
-}
-
-.proyecto-card-link:hover .proyecto-card-link-circulo {
-    border-color: var(--color-verde-lima);
-    color: var(--color-verde-lima);
-}
-
-/* About me */
+/* PÁGINA SOBRE MÍ — primera, fondo rosa */
 .pagina-sobre-mi {
     min-height: 100vh;
     padding: 80px 48px 48px;
@@ -263,4 +84,200 @@ body {
     font-size: 14px;
     color: var(--color-rojo);
     font-family: 'DM Sans', sans-serif;
+}
+
+/* PÁGINA PRINCIPAL — segunda, fondo navy */
+.pagina-principal {
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    padding: 8px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* Hero — título grande y datos de contacto */
+.hero-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hero-principal-titulo {
+    font-size: 8.5vw;
+    font-weight: 400;
+    line-height: 0.9;
+    color: rgba(245, 240, 232, 0.9);
+    font-family: 'Syne', sans-serif;
+    white-space: nowrap;
+}
+.hero-principal-currently {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.8;
+}
+/* Las O itálicas del título */
+.letra-italica {
+    font-style: italic;
+}
+
+.letra-italica-izquierda {
+    display: inline-block;
+    transform: skewX(15deg);
+}
+
+.letra-lima {
+    color: var(--color-verde-lima);
+}
+
+/* Fila de contacto bajo el título */
+.hero-principal-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Centro — based in barcelona */
+.hero-principal-centro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-principal-frase {
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 0.9;
+    color: #718096;
+    font-family: 'Syne', sans-serif;
+    margin-top: 60px;
+    margin-left: 350px;
+}
+
+/* Derecha — Github, LinkedIn y Email */
+.hero-principal-derecha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    right: 0;
+}
+
+.hero-principal-social {
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-negro-texto);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--color-verde-lima);
+    padding: 14px 18px;
+}
+
+.hero-principal-social:hover {
+    background-color: #4CAF7D;
+    color: var(--color-negro-texto);
+}
+
+/* Label PROJECTS */
+.proyectos-label {
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: rgba(245, 240, 232, 0.6);
+    margin-top: 0;
+    position: relative;
+    top: -20px;
+}
+
+/* Grid de proyectos : dos columnas */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Placeholder izquierda */
+.proyecto-card-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+}
+
+/* Tarjeta de proyecto */
+.proyecto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: radial-gradient(circle at top right, rgba(226,255,158,0.15) 0%, #0D1B2A 60%);
+    border-radius: 24px;
+    padding: 10px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.proyecto-card-imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 16px;
+    display: block;
+}
+
+.proyecto-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proyecto-card-titulo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: rgba(245, 240, 232, 0.9);
+}
+
+.proyecto-card-desc {
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.5;
+}
+
+.proyecto-card-footer {
+    display: flex;
+    align-items: center;
+}
+
+/* Link VIEW PROJECT */
+.proyecto-card-link {
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: rgba(245, 240, 232, 0.9);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.proyecto-card-link:hover {
+    color: var(--color-verde-lima);
+}
+
+/* Intro izquierda */
+.intro-nombre {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Syne', sans-serif;
+    color: rgba(245, 240, 232, 0.9);
+    margin-bottom: 16px;
 }
