@@ -22,7 +22,7 @@
 /* BASE */
 body {
     font-family: 'Syne', sans-serif;
-    background: #F9F8F5;
+    background:#FCFCFA;
     color: var(--color-beige);
     min-height: 100vh;
 }
@@ -235,12 +235,12 @@ body {
 }
 
 .stack-footer i {
-    font-size: 28px;
+    font-size: 35px;
     color: #4A4A4A;
 }
 
 .stack-footer-badge {
-    height: 28px;
+    height: 35px;
     width: auto;
 }
 
@@ -253,9 +253,9 @@ body {
 }
 
 .idioma-portfolio-activo {
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 600;
-    color: var(--color-verde-lima);
+    color: rgba(13, 13, 13, 0.9);
     cursor: pointer;
     font-family: 'DM Sans', sans-serif;
     background-color: transparent;
@@ -283,4 +283,29 @@ body {
 
 .social-lateral-link:hover {
     color: rgba(13, 13, 13, 0.9);
+}
+.nav-dots {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(13, 13, 13, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.activo {
+    background-color: var(--color-verde-lima);
+    height: 16px;
+    border-radius: 50%;
 }
