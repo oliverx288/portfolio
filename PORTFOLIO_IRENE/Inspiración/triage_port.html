@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Botón idioma -->
+    <div class="idioma-portfolio">
+        <span class="idioma-portfolio-activo">ES</span>
+    </div>
 
     <!-- HEADER -->
     <header class="detalle-header">
@@ -28,32 +33,32 @@
                     <span><i class="fab fa-css3-alt"></i></span>
                     <span><i class="fab fa-js"></i></span>
                 </div>
-                <p class="detalle-datos-contexto">A study conducted across 7 hospitals in Asturias found that 1 in 10 triage classifications are incorrect. Even the most experienced nurses make mistakes. The research revealed that years of practice have little correlation with accuracy, but simulation based training does.</p>
+                <p class="detalle-datos-contexto" id="tp-contexto">Un estudio realizado en 7 hospitales de Asturias reveló que 1 de cada 10 clasificaciones de triaje son incorrectas. Incluso las enfermeras más experimentadas cometen errores. La investigación reveló que los años de práctica tienen poca correlación con la precisión, pero el entrenamiento mediante simulación sí.</p>
                 <div class="detalle-datos-grid">
                     <div class="detalle-dato">
                         <span class="detalle-dato-numero">10.1%</span>
-                        <span class="detalle-dato-label">Patients classified as less serious than they actually were</span>
+                        <span class="detalle-dato-label" id="tp-label1">Pacientes clasificados como menos graves de lo que realmente eran</span>
                     </div>
                     <div class="detalle-dato">
                         <span class="detalle-dato-numero">6.3%</span>
-                        <span class="detalle-dato-label">Patients classified as more serious than they actually were</span>
+                        <span class="detalle-dato-label" id="tp-label2">Pacientes clasificados como más graves de lo que realmente eran</span>
                     </div>
                     <div class="detalle-dato">
                         <span class="detalle-dato-numero">80%</span>
-                        <span class="detalle-dato-label">Triage classifications that were correct</span>
+                        <span class="detalle-dato-label" id="tp-label3">Clasificaciones de triaje correctas</span>
                     </div>
                     <div class="detalle-dato">
                         <span class="detalle-dato-numero">100</span>
-                        <span class="detalle-dato-label">Nurses who took part in the study across 7 hospitals</span>
+                        <span class="detalle-dato-label" id="tp-label4">Enfermeras que participaron en el estudio en 7 hospitales</span>
                     </div>
                 </div>
-                <a href="https://www.sciencedirect.com/science/article/pii/S1130862126000033" target="_blank" class="detalle-fuente">
-                    READ THE FULL STUDY
+                <a href="https://www.sciencedirect.com/science/article/pii/S1130862126000033" target="_blank" class="detalle-fuente" id="tp-estudio">
+                    LEER EL ESTUDIO COMPLETO
                 </a>
             </div>
             <div class="detalle-hero-derecha">
                 <img src="js_muestra.png" alt="TriPage JS triage logic" class="detalle-codigo-img">
-                <p class="detalle-codigo-caption">Triage logic — comparing user response against the correct Manchester level</p>
+                <p class="detalle-codigo-caption" id="tp-caption">Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto</p>
                 <section class="detalle-links">
                     <a href="https://github.com/oliverx288/tripage" target="_blank" class="detalle-link-btn">
                         <i class="fab fa-github"></i> GitHub
@@ -73,22 +78,78 @@
 
         <!-- WHY I BUILT THIS -->
         <section class="detalle-seccion">
-            <p class="detalle-seccion-label">Why I built this</p>
-            <p class="detalle-seccion-texto">Before coding I studied nursing. I saw firsthand what happens in an emergency department during a mass casualty event or when the service is overwhelmed. The Manchester Triage System is what decides who gets care first — and getting it wrong has real consequences. No free web-based tool existed to practice it.</p>
+            <p class="detalle-seccion-label" id="tp-label-why">Por qué lo construí</p>
+            <p class="detalle-seccion-texto" id="tp-texto-why">Antes de programar estudié enfermería. Vi de primera mano lo que ocurre en urgencias durante un incidente de múltiples víctimas o cuando el servicio está desbordado. El Sistema de Triaje Manchester es lo que decide quién recibe atención primero — y equivocarse tiene consecuencias reales. No existía ninguna herramienta web gratuita para practicarlo.</p>
         </section>
 
         <!-- THE PROCESS -->
         <section class="detalle-seccion">
-            <p class="detalle-seccion-label">The process</p>
-            <p class="detalle-seccion-texto">I started on paper. I considered flashcards, random cases, categorising by clinical type — cardiovascular, trauma, neurological. But categorising by type gave hints away. In real emergency departments you don't know what's coming. I decided to filter by difficulty instead. I spoke with medicine students at Universitat Pompeu Fabra — they confirmed nothing like this exists and it would help them prepare for the ECOE exam.</p>
+            <p class="detalle-seccion-label" id="tp-label-process">El proceso</p>
+            <p class="detalle-seccion-texto" id="tp-texto-process">Empecé en papel. Consideré flashcards, casos aleatorios, categorizar por tipo clínico — cardiovascular, trauma, neurológico. Pero categorizar por tipo daba pistas. En los servicios de urgencias reales no sabes lo que viene. Decidí filtrar por dificultad. Hablé con estudiantes de medicina de la Universitat Pompeu Fabra — confirmaron que no existe nada parecido y que les ayudaría a preparar el examen ECOE.</p>
         </section>
 
         <!-- CURRENT STATUS -->
         <section class="detalle-seccion">
-            <p class="detalle-seccion-label">Current status</p>
-            <p class="detalle-seccion-texto">Currently in validation with medicine students at Universitat Pompeu Fabra. JavaScript logic is pending implementation — design and all 10 clinical cases are complete.</p>
+            <p class="detalle-seccion-label" id="tp-label-status">Estado actual</p>
+            <p class="detalle-seccion-texto" id="tp-texto-status">Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.</p>
         </section>
 
     </main>
+
+    <script>
+        const textos = {
+            es: {
+                contexto: "Un estudio realizado en 7 hospitales de Asturias reveló que 1 de cada 10 clasificaciones de triaje son incorrectas. Incluso las enfermeras más experimentadas cometen errores. La investigación reveló que los años de práctica tienen poca correlación con la precisión, pero el entrenamiento mediante simulación sí.",
+                label1: "Pacientes clasificados como menos graves de lo que realmente eran",
+                label2: "Pacientes clasificados como más graves de lo que realmente eran",
+                label3: "Clasificaciones de triaje correctas",
+                label4: "Enfermeras que participaron en el estudio en 7 hospitales",
+                estudio: "LEER EL ESTUDIO COMPLETO",
+                caption: "Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto",
+                labelWhy: "Por qué lo construí",
+                textoWhy: "Antes de programar estudié enfermería. Vi de primera mano lo que ocurre en urgencias durante un incidente de múltiples víctimas o cuando el servicio está desbordado. El Sistema de Triaje Manchester es lo que decide quién recibe atención primero — y equivocarse tiene consecuencias reales. No existía ninguna herramienta web gratuita para practicarlo.",
+                labelProcess: "El proceso",
+                textoProcess: "Empecé en papel. Consideré flashcards, casos aleatorios, categorizar por tipo clínico — cardiovascular, trauma, neurológico. Pero categorizar por tipo daba pistas. En los servicios de urgencias reales no sabes lo que viene. Decidí filtrar por dificultad. Hablé con estudiantes de medicina de la Universitat Pompeu Fabra — confirmaron que no existe nada parecido y que les ayudaría a preparar el examen ECOE.",
+                labelStatus: "Estado actual",
+                textoStatus: "Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés."
+            },
+            en: {
+                contexto: "A study conducted across 7 hospitals in Asturias found that 1 in 10 triage classifications are incorrect. Even the most experienced nurses make mistakes. The research revealed that years of practice have little correlation with accuracy, but simulation based training does.",
+                label1: "Patients classified as less serious than they actually were",
+                label2: "Patients classified as more serious than they actually were",
+                label3: "Triage classifications that were correct",
+                label4: "Nurses who took part in the study across 7 hospitals",
+                estudio: "READ THE FULL STUDY",
+                caption: "Triage logic — comparing user response against the correct Manchester level",
+                labelWhy: "Why I built this",
+                textoWhy: "Before coding I studied nursing. I saw firsthand what happens in an emergency department during a mass casualty event or when the service is overwhelmed. The Manchester Triage System is what decides who gets care first — and getting it wrong has real consequences. No free web-based tool existed to practice it.",
+                labelProcess: "The process",
+                textoProcess: "I started on paper. I considered flashcards, random cases, categorising by clinical type — cardiovascular, trauma, neurological. But categorising by type gave hints away. In real emergency departments you don't know what's coming. I decided to filter by difficulty instead. I spoke with medicine students at Universitat Pompeu Fabra — they confirmed nothing like this exists and it would help them prepare for the ECOE exam.",
+                labelStatus: "Current status",
+                textoStatus: "Currently in validation with medicine students at Universitat Pompeu Fabra. TriPage has 50 real clinical cases and is available in Spanish and English."
+            }
+        }
+
+        let idioma = "es"
+
+        document.querySelector(".idioma-portfolio-activo").addEventListener("click", () => {
+            idioma = idioma === "es" ? "en" : "es"
+            document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase()
+            document.getElementById("tp-contexto").textContent = textos[idioma].contexto
+            document.getElementById("tp-label1").textContent = textos[idioma].label1
+            document.getElementById("tp-label2").textContent = textos[idioma].label2
+            document.getElementById("tp-label3").textContent = textos[idioma].label3
+            document.getElementById("tp-label4").textContent = textos[idioma].label4
+            document.getElementById("tp-estudio").textContent = textos[idioma].estudio
+            document.getElementById("tp-caption").textContent = textos[idioma].caption
+            document.getElementById("tp-label-why").textContent = textos[idioma].labelWhy
+            document.getElementById("tp-texto-why").textContent = textos[idioma].textoWhy
+            document.getElementById("tp-label-process").textContent = textos[idioma].labelProcess
+            document.getElementById("tp-texto-process").textContent = textos[idioma].textoProcess
+            document.getElementById("tp-label-status").textContent = textos[idioma].labelStatus
+            document.getElementById("tp-texto-status").textContent = textos[idioma].textoStatus
+        })
+    </script>
+
 </body>
 </html>

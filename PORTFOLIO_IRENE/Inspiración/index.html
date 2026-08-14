@@ -11,32 +11,31 @@
 </head>
 <body>
 
+    <!-- Botón idioma — esquina superior derecha -->
+    <div class="idioma-portfolio">
+        <span class="idioma-portfolio-activo">ES</span>
+    </div>
+
+    <!-- Sociales lateral izquierdo -->
+    <div class="social-lateral">
+        <a href="https://www.linkedin.com/in/irene-oliver-oliver/" target="_blank" class="social-lateral-link">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/oliverx288" target="_blank" class="social-lateral-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:ireneoliverx2@gmail.com" class="social-lateral-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
     <!-- Página Principal -->
     <section class="pagina-principal" id="works">
 
         <!-- Hero -->
         <div class="hero-principal">
-            <h1 class="hero-principal-titulo">FR<span class="letra-italica letra-lima">O</span>NTEND DEVEL<span class="letra-italica-izquierda letra-lima">O</span>PER</h1>
-            <div class="hero-principal-info">
-                <div class="hero-principal-centro">
-                    <p class="hero-principal-frase">PROJECTS</p>
-                </div>
-                <div class="hero-principal-derecha">
-                    <a href="https://www.linkedin.com/in/irene-oliver-oliver/" target="_blank" class="hero-principal-social">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/oliverx288" target="_blank" class="hero-principal-social">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:ireneoliverx2@gmail.com" class="hero-principal-social">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
+            <h1 class="hero-principal-titulo">FR<span class="letra-italica letra-lima">O</span>NTEND<br>DEVEL<span class="letra-italica-izquierda letra-lima">O</span>PER</h1>
         </div>
-
-        <!-- About me label -->
-        <p class="proyectos-label">ABOUT ME</p>
 
         <!-- Grid -->
         <div class="proyectos-grid">
@@ -44,39 +43,71 @@
             <!-- Columna izquierda — intro -->
             <div class="proyecto-card-placeholder">
                 <h2 class="intro-nombre">IRENE OLIVER</h2>
-                <p class="intro-texto">BASED IN BARCELONA</p>
-                <p class="hero-principal-currently">Currently working at a healthtech startup and<br>finishing my DAW degree.</p>
-                <div class="stack-iconos">
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-java-plain colored"></i>
-                    <i class="devicon-mysql-plain colored"></i>
-                    <img src="az900.png" alt="AZ-900" class="stack-badge">
-                    <i class="devicon-amazonwebservices-plain colored"></i>
-                </div>
+                <p class="intro-texto" id="texto-location">BASED IN BARCELONA</p>
+                <p class="hero-principal-currently" id="texto-currently">Actualmente trabajando en una startup<br>de healthtech y terminando mi grado DAW.</p>
             </div>
 
             <!-- Columna derecha — card TriPage -->
             <div class="proyecto-card">
-                <img src="macfoto_buena.png" alt="TriPage" class="proyecto-card-imagen">
-                <div class="proyecto-card-info">
-                    <div>
-                        <h2 class="proyecto-card-titulo">TriPage</h2>
-                        <p class="proyecto-card-desc">Clinical triage training based on the Manchester protocol.</p>
-                    </div>
-                    <div class="proyecto-card-footer">
-                        <a href="triage_port.html" class="proyecto-card-link">
-                            <i class="fas fa-plus"></i>
-                            VIEW PROJECT
-                        </a>
-                    </div>
+                <div class="proyecto-card-izquierda">
+                    <p class="proyectos-label" id="texto-aboutme">PROYECTO</p>
+                    <h2 class="proyecto-card-titulo">TriPage</h2>
+                    <p class="proyecto-card-desc" id="texto-desc">Entrenamiento de triaje clínico basado en el protocolo Manchester.</p>
+                    <a href="triage_port.html" class="proyecto-card-link" id="texto-viewproject">
+                        VER PROYECTO →
+                    </a>
+                </div>
+                <div class="proyecto-card-derecha">
+                    <img src="macfoto_buena.png" alt="TriPage" class="proyecto-card-imagen">
                 </div>
             </div>
 
         </div>
+
+        <!-- Stack footer -->
+        <div class="stack-footer">
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-python-plain"></i>
+            <i class="devicon-java-plain"></i>
+            <i class="devicon-mysql-plain"></i>
+            <img src="az900.png" alt="AZ-900" class="stack-footer-badge">
+            <i class="devicon-amazonwebservices-plain"></i>
+        </div>
+
     </section>
+
+    <script>
+        const textos = {
+            es: {
+                aboutme: "PROYECTO",
+                location: "BASED IN BARCELONA",
+                currently: "Actualmente trabajando en una startup<br>de healthtech y terminando mi grado DAW.",
+                desc: "Entrenamiento de triaje clínico basado en el protocolo Manchester.",
+                viewproject: "VER PROYECTO →"
+            },
+            en: {
+                aboutme: "PROJECT",
+                location: "BASED IN BARCELONA",
+                currently: "Currently working at a healthtech startup<br>and finishing my DAW degree.",
+                desc: "Clinical triage training based on the Manchester protocol.",
+                viewproject: "VIEW PROJECT →"
+            }
+        }
+
+        let idioma = "es"
+
+        document.querySelector(".idioma-portfolio-activo").addEventListener("click", () => {
+            idioma = idioma === "es" ? "en" : "es"
+            document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase()
+            document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme
+            document.getElementById("texto-location").textContent = textos[idioma].location
+            document.getElementById("texto-currently").innerHTML = textos[idioma].currently
+            document.getElementById("texto-desc").textContent = textos[idioma].desc
+            document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject
+        })
+    </script>
 
 </body>
 </html>
