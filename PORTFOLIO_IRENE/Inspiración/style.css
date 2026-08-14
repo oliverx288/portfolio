@@ -22,7 +22,7 @@
 /* BASE */
 body {
     font-family: 'Syne', sans-serif;
-    background: radial-gradient(ellipse 120% 80% at 50% 30%, rgba(139,38,53,0.25) 0%, #F0EDEA 55%);
+    background: #F9F8F5;
     color: var(--color-beige);
     min-height: 100vh;
 }
@@ -48,7 +48,7 @@ body {
 
 .hero-principal-titulo {
     font-size: 70px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 0.9;
     color: rgba(13, 13, 13, 0.9);
     font-family: 'Syne', sans-serif;
@@ -77,6 +77,30 @@ body {
     color: var(--color-verde-lima);
 }
 
+/* Formas del título */
+/* Formas del título */
+.letra-circulo,
+.letra-cuadrado {
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    margin: 0 1px;
+    vertical-align: -4px;
+}
+
+.letra-circulo {
+    border-radius: 50%;
+    background-color: #8A8A87;
+}
+
+.letra-cuadrado {
+    width: 54px;
+    height: 54px;
+    background-color: #5F5F5C;
+    transform: translateY(-3px);
+    clip-path: inset(4px 0 0 0);
+}
+
 /* GRID */
 .proyectos-grid {
     display: contents;
@@ -92,7 +116,6 @@ body {
     padding-left: 80px;
     padding-top: 35px;
 }
-
 
 /* Tarjeta de proyecto */
 .proyecto-card {
