@@ -1,3 +1,8 @@
+Se ha pegado el código(1)_iconos.html
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +16,56 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Iconos de las estadísticas */
+        .detalle-dato {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .detalle-dato-icono {
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            background: #e8f4ed;
+            color: #087548;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .detalle-dato-icono svg {
+            width: 17px;
+            height: 17px;
+            stroke-width: 2;
+        }
+
+        .detalle-dato-contenido {
+            min-width: 0;
+        }
+
+        @media (max-width: 700px) {
+            .detalle-dato {
+                gap: 9px;
+            }
+
+            .detalle-dato-icono {
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+            }
+
+            .detalle-dato-icono svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -53,31 +108,51 @@
                 <div class="detalle-datos-grid">
 
                     <div class="detalle-dato">
-                        <span class="detalle-dato-numero">10.1%</span>
-                        <span class="detalle-dato-label" id="tp-label1">
-                            Pacientes clasificados como menos graves de lo que realmente eran
-                        </span>
+                        <div class="detalle-dato-icono">
+                            <i data-lucide="user-round-minus"></i>
+                        </div>
+                        <div class="detalle-dato-contenido">
+                            <span class="detalle-dato-numero">10.1%</span>
+                            <span class="detalle-dato-label" id="tp-label1">
+                                Pacientes clasificados como menos graves de lo que realmente eran
+                            </span>
+                        </div>
                     </div>
 
                     <div class="detalle-dato">
-                        <span class="detalle-dato-numero">6.3%</span>
-                        <span class="detalle-dato-label" id="tp-label2">
-                            Pacientes clasificados como más graves de lo que realmente eran
-                        </span>
+                        <div class="detalle-dato-icono">
+                            <i data-lucide="user-round-plus"></i>
+                        </div>
+                        <div class="detalle-dato-contenido">
+                            <span class="detalle-dato-numero">6.3%</span>
+                            <span class="detalle-dato-label" id="tp-label2">
+                                Pacientes clasificados como más graves de lo que realmente eran
+                            </span>
+                        </div>
                     </div>
 
                     <div class="detalle-dato">
-                        <span class="detalle-dato-numero">80%</span>
-                        <span class="detalle-dato-label" id="tp-label3">
-                            Clasificaciones de triaje correctas
-                        </span>
+                        <div class="detalle-dato-icono">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="detalle-dato-contenido">
+                            <span class="detalle-dato-numero">80%</span>
+                            <span class="detalle-dato-label" id="tp-label3">
+                                Clasificaciones de triaje correctas
+                            </span>
+                        </div>
                     </div>
 
                     <div class="detalle-dato">
-                        <span class="detalle-dato-numero">100</span>
-                        <span class="detalle-dato-label" id="tp-label4">
-                            Enfermeras que participaron en el estudio en 7 hospitales
-                        </span>
+                        <div class="detalle-dato-icono">
+                            <i data-lucide="users-round"></i>
+                        </div>
+                        <div class="detalle-dato-contenido">
+                            <span class="detalle-dato-numero">100</span>
+                            <span class="detalle-dato-label" id="tp-label4">
+                                Enfermeras que participaron en el estudio en 7 hospitales
+                            </span>
+                        </div>
                     </div>
 
                 </div>
@@ -472,6 +547,9 @@
                     .textContent = textos[idioma].textoStatus;
 
             });
+
+            // Renderizar los iconos de las estadísticas
+            lucide.createIcons();
 
     </script>
 

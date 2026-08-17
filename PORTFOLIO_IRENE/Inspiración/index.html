@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irene Oliver Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,70 +13,92 @@
 
 <body>
 
-    <!-- Botón idioma — esquina superior derecha -->
+    <!-- Botón idioma -->
     <div class="idioma-portfolio">
         <span class="idioma-portfolio-activo">ES</span>
     </div>
 
-    <!-- Sociales lateral izquierdo -->
+    <!-- Redes sociales lateral izquierdo -->
     <div class="social-lateral">
-        <a href="https://www.linkedin.com/in/irene-oliver-oliver/" target="_blank" class="social-lateral-link">
+        <a href="https://www.linkedin.com/in/irene-oliver-oliver/" target="_blank" class="social-lateral-link" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/oliverx288" target="_blank" class="social-lateral-link">
+        <a href="https://github.com/oliverx288" target="_blank" class="social-lateral-link" aria-label="GitHub">
             <i class="fab fa-github"></i>
         </a>
-        <a href="mailto:ireneoliverx2@gmail.com" class="social-lateral-link">
+        <a href="mailto:ireneoliverx2@gmail.com" class="social-lateral-link" aria-label="Email">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
 
-    <!-- Nav dots -->
+    <!-- Navegación lateral -->
     <div class="nav-dots">
         <span class="dot activo"></span>
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
 
-    <!-- Página Principal -->
+    <!-- Página principal -->
     <section class="pagina-principal" id="works">
 
-        <!-- Hero -->
+        <!-- HERO -->
         <div class="hero-principal">
             <h1 class="hero-principal-titulo">
-                FR<span class="letra-circulo letra-azul"></span>NTEND<br>
-                DEVEL<span class="letra-cuadrado letra-rojo"></span>PER
+                FR<span class="letra-circulo"></span>NTEND<br>
+                DEVEL<span class="letra-circulo"></span>PER
             </h1>
         </div>
 
-        <!-- Grid -->
+        <!-- GRID DE PROYECTOS -->
         <div class="proyectos-grid">
 
-            <!-- Columna izquierda — intro -->
+            <!-- INTRODUCCIÓN -->
             <div class="proyecto-card-placeholder">
                 <h2 class="intro-nombre">IRENE OLIVER</h2>
-                <p class="intro-texto" id="texto-location">BASED IN BARCELONA</p>
+
+                <p class="intro-texto" id="texto-location">
+                    BASED IN BARCELONA
+                </p>
+
                 <p class="hero-principal-currently" id="texto-currently">
-                    Actualmente desarrollo mi experiencia profesional <br> en una startup de healthtech mientras finalizo mi grado en DAW.
+                    Actualmente desarrollo mi experiencia profesional
+                    <br>
+                    en una startup healthtech mientras finalizo mi grado en DAW.
                 </p>
             </div>
 
-            <!-- Columna derecha — card TriPage -->
+            <!-- PROYECTO -->
             <div class="proyecto-card">
+
+                <!-- Información -->
                 <div class="proyecto-card-izquierda">
-                    <p class="proyectos-label" id="texto-aboutme">PROYECTO</p>
-                    <h2 class="proyecto-card-titulo" id="proyecto-titulo">TriPage</h2>
-                    <p class="proyecto-card-desc" id="texto-desc">Entrenamiento de triaje clínico basado en el protocolo Manchester.</p>
-                    <a href="triage_port.html" class="proyecto-card-link" id="texto-viewproject">VER PROYECTO</a>
+
+                    <p class="proyectos-label" id="texto-aboutme">
+                        PROYECTO
+                    </p>
+
+                    <h2 class="proyecto-card-titulo" id="proyecto-titulo">
+                        TriPage
+                    </h2>
+
+                    <p class="proyecto-card-desc" id="texto-desc">
+                        Entrenamiento de triaje clínico basado en el protocolo Manchester.
+                    </p>
+
+                    <a href="triage_port.html" class="proyecto-card-link" id="texto-viewproject">
+                        VER PROYECTO
+                    </a>
                 </div>
+
+                <!-- Imagen -->
                 <div class="proyecto-card-derecha">
                     <img src="macfoto_buena.png" alt="TriPage" class="proyecto-card-imagen" id="proyecto-imagen">
                 </div>
-            </div>
 
+            </div>
         </div>
 
-        <!-- Stack footer -->
+        <!-- STACK -->
         <div class="stack-footer">
             <i class="devicon-html5-plain"></i>
             <i class="devicon-css3-plain"></i>
@@ -83,75 +106,112 @@
             <i class="devicon-python-plain"></i>
             <i class="devicon-java-plain"></i>
             <i class="devicon-mysql-plain"></i>
+
             <img src="az900.png" alt="AZ-900" class="stack-footer-badge">
+
             <i class="devicon-amazonwebservices-plain"></i>
         </div>
 
     </section>
 
+    <!-- JAVASCRIPT -->
     <script>
+
         const textos = {
             es: {
                 aboutme: "PROYECTO",
                 location: "BASED IN BARCELONA",
-                currently: "Actualmente trabajando en una startup<br>de healthtech y terminando mi grado DAW.",
-                desc: "Entrenamiento de triaje clínico basado en el protocolo Manchester.",
+                currently:
+                    "Actualmente trabajando en una startup<br>" +
+                    "de healthtech y terminando mi grado DAW.",
+                desc:
+                    "Entrenamiento de triaje clínico basado en el protocolo Manchester.",
                 viewproject: "VER PROYECTO",
                 proximamente: "Próximamente",
                 enDesarrollo: "Nuevo proyecto en desarrollo."
             },
+
             en: {
                 aboutme: "PROJECT",
                 location: "BASED IN BARCELONA",
-                currently: "Currently working at a healthtech startup<br>and finishing my DAW degree.",
-                desc: "Clinical triage training based on the Manchester protocol.",
+                currently:
+                    "Currently working at a healthtech startup<br>" +
+                    "and finishing my DAW degree.",
+                desc:
+                    "Clinical triage training based on the Manchester protocol.",
                 viewproject: "VIEW PROJECT",
                 proximamente: "Coming soon",
                 enDesarrollo: "New project in development."
             }
-        }
+        };
 
-        let idioma = "es"
+        let idioma = "es";
 
+        /* CAMBIO DE IDIOMA */
         document.querySelector(".idioma-portfolio-activo").addEventListener("click", () => {
-            idioma = idioma === "es" ? "en" : "es"
-            document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase()
-            document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme
-            document.getElementById("texto-location").textContent = textos[idioma].location
-            document.getElementById("texto-currently").innerHTML = textos[idioma].currently
-            document.getElementById("texto-desc").textContent = textos[idioma].desc
-            document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject
-        })
 
-        const dots = document.querySelectorAll(".dot")
+            idioma = idioma === "es" ? "en" : "es";
+
+            document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase();
+            document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme;
+            document.getElementById("texto-location").textContent = textos[idioma].location;
+            document.getElementById("texto-currently").innerHTML = textos[idioma].currently;
+            document.getElementById("texto-desc").textContent = textos[idioma].desc;
+            document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject;
+
+        });
+
+        /* NAVEGACIÓN DE PROYECTOS */
+        const dots = document.querySelectorAll(".dot");
 
         dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                dots.forEach(d => d.classList.remove("activo"))
-                dot.classList.add("activo")
 
+            dot.addEventListener("click", () => {
+
+                dots.forEach(d => {
+                    d.classList.remove("activo");
+                });
+
+                dot.classList.add("activo");
+
+                /* PROYECTO 1 */
                 if (i === 0) {
-                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme
-                    document.getElementById("proyecto-titulo").textContent = "TriPage"
-                    document.getElementById("texto-desc").textContent = textos[idioma].desc
-                    document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject
-                    document.getElementById("texto-viewproject").href = "triage_port.html"
-                    document.getElementById("proyecto-imagen").src = "macfoto_buena.png"
-                } else if (i === 1) {
-                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme
-                    document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente
-                    document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo
-                    document.getElementById("texto-viewproject").textContent = ""
-                    document.getElementById("proyecto-imagen").src = ""
-                } else if (i === 2) {
-                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme
-                    document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente
-                    document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo
-                    document.getElementById("texto-viewproject").textContent = ""
-                    document.getElementById("proyecto-imagen").src = ""
+
+                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme;
+                    document.getElementById("proyecto-titulo").textContent = "TriPage";
+                    document.getElementById("texto-desc").textContent = textos[idioma].desc;
+                    document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject;
+                    document.getElementById("texto-viewproject").href = "triage_port.html";
+                    document.getElementById("proyecto-imagen").src = "macfoto_buena.png";
+
                 }
-            })
-        })
+
+                /* PROYECTO 2 */
+                else if (i === 1) {
+
+                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme;
+                    document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente;
+                    document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo;
+                    document.getElementById("texto-viewproject").textContent = "";
+                    document.getElementById("proyecto-imagen").src = "";
+
+                }
+
+                /* PROYECTO 3 */
+                else if (i === 2) {
+
+                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme;
+                    document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente;
+                    document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo;
+                    document.getElementById("texto-viewproject").textContent = "";
+                    document.getElementById("proyecto-imagen").src = "";
+
+                }
+
+            });
+
+        });
+
     </script>
 
 </body>
