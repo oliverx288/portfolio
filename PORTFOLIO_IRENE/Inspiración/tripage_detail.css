@@ -18,7 +18,7 @@
 /* BASE */
 body {
     font-family: 'Syne', sans-serif;
-    background: radial-gradient(ellipse 120% 80% at 65% 65%, rgba(139,38,53,0.25) 0%, #F0EDEA 55%);
+    background: #f7f9ff;
     background-attachment: fixed;
     color: var(--color-texto);
     min-height: 100vh;
@@ -117,12 +117,7 @@ body {
     color: var(--color-texto);
     padding: 4px 12px;
     filter: grayscale(100%) brightness(0.4);
-    opacity: 1;
 }
-
-.fa-html5 { color: #E34F26; }
-.fa-css3-alt { color: #1572B6; }
-.fa-js { color: #F7DF1E; }
 
 /* DATOS */
 .detalle-datos-contexto {
@@ -181,6 +176,7 @@ body {
     background-color: rgba(13, 13, 13, 0.05);
 }
 
+/* LINKS */
 .detalle-links {
     display: flex;
     gap: 12px;
@@ -205,45 +201,6 @@ body {
 
 .detalle-link-btn:hover {
     background-color: rgba(13, 13, 13, 0.05);
-    color: rgba(13, 13, 13, 0.9);
-}
-
-/* IMAGEN PRINCIPAL */
-.detalle-imagen-principal {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.detalle-img {
-    width: 70%;
-    height: auto;
-    border-radius: 16px;
-}
-
-/* SECCIONES DE TEXTO */
-.detalle-seccion {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-width: 680px;
-    margin: 0 auto;
-}
-
-.detalle-seccion-label {
-    font-size: 16px;
-    font-family: 'DM Sans', sans-serif;
-    color: var(--color-granate);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.detalle-seccion-texto {
-    font-size: 18px;
-    font-family: 'DM Sans', sans-serif;
-    color: var(--color-texto-suave);
-    line-height: 1.7;
-    text-align: justify;
 }
 
 /* CAPTURAS */
@@ -259,6 +216,109 @@ body {
     border-radius: 12px;
     border: 1px solid var(--color-borde);
 }
+
+/* SECCIONES */
+.detalle-seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.detalle-seccion-label {
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.detalle-seccion-texto {
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    color: #333333;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0;
+}
+
+/* DOS COLUMNAS */
+.detalle-secciones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    align-items: start;
+    width: 100%;
+}
+
+.detalle-secciones-grid .detalle-seccion:first-child {
+    background: #ECEEF5;
+    border-radius: 20px;
+    padding: 28px 32px;
+    width: 100%;
+    margin: 0;
+}
+
+.detalle-secciones-grid .detalle-seccion:last-child {
+    background: #ECEEF5;
+    border-radius: 20px;
+    padding: 28px 32px;
+    width: 100%;
+    margin: 0;
+}
+
+/* TÍTULOS PEQUEÑOS */
+.tripage-mini-titulo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.tripage-mini-titulo:first-of-type {
+    margin-top: 22px;
+}
+
+/* TÍTULO + ICONO */
+.tripage-titulo-con-imagen {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.tripage-titulo-con-imagen .tripage-mini-titulo {
+    margin: 0;
+}
+
+.tripage-mini-imagen {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transform: translateY(8px);
+}
+
+/* PÁRRAFOS DEL PROCESO */
+.tripage-proceso-parrafo {
+    margin-bottom: 18px;
+}
+
+.tripage-proceso-parrafo:last-child {
+    margin-bottom: 0;
+}
+
+/* TRIPAGE */
+.tripage-rojo {
+    color: #E3262E;
+}
+
+/* IDIOMA */
 .idioma-portfolio {
     position: fixed;
     top: 24px;
@@ -274,4 +334,44 @@ body {
     font-family: 'DM Sans', sans-serif;
     background-color: transparent;
     border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .detalle-main {
+        padding: 40px 24px;
+    }
+
+    .detalle-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-hero-derecha {
+        padding-top: 40px;
+    }
+
+    .detalle-secciones-grid {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .detalle-secciones-grid .detalle-seccion:first-child,
+    .detalle-secciones-grid .detalle-seccion:last-child {
+        padding: 24px;
+    }
+
+    .detalle-capturas {
+        grid-template-columns: 1fr;
+    }
+
+    .tripage-titulo-con-imagen {
+        gap: 12px;
+    }
+
+    .tripage-mini-imagen {
+        width: 48px;
+        height: 48px;
+        transform: translateY(8px);
+    }
 }
