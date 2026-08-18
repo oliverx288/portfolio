@@ -1,73 +1,177 @@
-Se ha pegado el código(1)_iconos.html
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TriPage — Irene Oliver</title>
-
     <link rel="stylesheet" href="tripage_detail.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
-        /* Iconos de las estadísticas */
         .detalle-dato {
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            background-color: #FEF2F2 !important;
+            border-radius: 16px;
+            padding: 16px;
         }
-
         .detalle-dato-icono {
             width: 34px;
             height: 34px;
             min-width: 34px;
             border-radius: 50%;
-            background: #e8f4ed;
-            color: #087548;
+            background: rgba(139, 38, 53, 0.1) !important;
+            color: #8B2635 !important;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-top: 1px;
         }
-
         .detalle-dato-icono svg {
             width: 17px;
             height: 17px;
             stroke-width: 2;
         }
-
         .detalle-dato-contenido {
             min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
-
-        @media (max-width: 700px) {
-            .detalle-dato {
-                gap: 9px;
-            }
-
-            .detalle-dato-icono {
-                width: 30px;
-                height: 30px;
-                min-width: 30px;
-            }
-
-            .detalle-dato-icono svg {
-                width: 15px;
-                height: 15px;
-            }
+        .detalle-secciones-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch !important;
+        }
+        .tripage-razon {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .tripage-razon-icono {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 12px;
+            background-color: rgba(139, 38, 53, 0.1);
+            color: #8B2635;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tripage-razon-icono svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 1.5;
+        }
+        .tripage-mini-titulo {
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            color: #0D0D0D;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .tripage-paso {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .tripage-paso-flecha {
+            font-size: 20px;
+            color: #8B2635;
+            text-align: center;
+            opacity: 0.5;
+        }
+        .tripage-rojo {
+            color: #8B2635;
+        }
+        .estado-actual {
+            display: flex;
+            gap: 48px;
+            background:
+                radial-gradient(ellipse 42% 52% at 91% 4%, rgba(255, 73, 42, 0.90) 0%, rgba(255, 102, 72, 0.65) 25%, rgba(255, 142, 113, 0.32) 48%, transparent 75%),
+                radial-gradient(ellipse 28% 40% at 3% 94%, rgba(255, 173, 40, 0.85) 0%, rgba(255, 185, 70, 0.52) 30%, rgba(255, 205, 120, 0.20) 55%, transparent 78%),
+                #FFF9F2;
+            border-radius: 20px;
+            padding: 40px;
+            align-items: center;
+        }
+        .estado-actual-izquierda {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            align-items: flex-start;
+            flex: 1.5;
+        }
+        .estado-icono {
+            width: 300px;
+            min-width: 60px;
+            border-radius: 12px;
+            background: rgba(139, 38, 53, 0.1);
+            color: #8B2635;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+        }
+        .estado-icono svg {
+            width: 32px;
+            height: 32px;
+            stroke-width: 1.5;
+        }
+        .estado-actual-metricas {
+            flex: 1;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+        }
+        .estado-metrica-caja {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 16px 24px;
+        }
+        .estado-metrica-numero {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: #8B2635;
+            line-height: 1;
+        }
+        .estado-metrica-label {
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+            color: #6B6B6B;
+            text-align: center;
+        }
+        .estado-validacion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .estado-metrica-badge {
+            background-color: rgba(139, 38, 53, 0.1);
+            border-radius: 20px;
+            padding: 8px 16px;
+        }
+        .estado-badge-texto {
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            color: #8B2635;
         }
     </style>
 </head>
-
 <body>
 
     <div class="idioma-portfolio">
@@ -83,19 +187,14 @@ Se ha pegado el código(1)_iconos.html
     <main class="detalle-main">
 
         <!-- HERO -->
-
         <section class="detalle-hero">
-
             <div class="detalle-hero-izquierda">
-
                 <h1 class="detalle-titulo">TriPage</h1>
-
                 <div class="detalle-tags">
                     <span><i class="fab fa-html5"></i></span>
                     <span><i class="fab fa-css3-alt"></i></span>
                     <span><i class="fab fa-js"></i></span>
                 </div>
-
                 <p class="detalle-datos-contexto" id="tp-contexto">
                     Un estudio realizado en 7 hospitales de Asturias reveló que
                     <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong>
@@ -106,451 +205,260 @@ Se ha pegado el código(1)_iconos.html
                 </p>
 
                 <div class="detalle-datos-grid">
-
                     <div class="detalle-dato">
                         <div class="detalle-dato-icono">
                             <i data-lucide="user-round-minus"></i>
                         </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">10.1%</span>
-                            <span class="detalle-dato-label" id="tp-label1">
-                                Pacientes clasificados como menos graves de lo que realmente eran
-                            </span>
+                            <span class="detalle-dato-label" id="tp-label1">Pacientes clasificados como menos graves de lo que realmente eran</span>
                         </div>
                     </div>
-
                     <div class="detalle-dato">
                         <div class="detalle-dato-icono">
                             <i data-lucide="user-round-plus"></i>
                         </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">6.3%</span>
-                            <span class="detalle-dato-label" id="tp-label2">
-                                Pacientes clasificados como más graves de lo que realmente eran
-                            </span>
+                            <span class="detalle-dato-label" id="tp-label2">Pacientes clasificados como más graves de lo que realmente eran</span>
                         </div>
                     </div>
-
                     <div class="detalle-dato">
                         <div class="detalle-dato-icono">
                             <i data-lucide="shield-check"></i>
                         </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">80%</span>
-                            <span class="detalle-dato-label" id="tp-label3">
-                                Clasificaciones de triaje correctas
-                            </span>
+                            <span class="detalle-dato-label" id="tp-label3">Clasificaciones de triaje correctas</span>
                         </div>
                     </div>
-
                     <div class="detalle-dato">
                         <div class="detalle-dato-icono">
                             <i data-lucide="users-round"></i>
                         </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">100</span>
-                            <span class="detalle-dato-label" id="tp-label4">
-                                Enfermeras que participaron en el estudio en 7 hospitales
-                            </span>
+                            <span class="detalle-dato-label" id="tp-label4">Enfermeras que participaron en el estudio en 7 hospitales</span>
                         </div>
                     </div>
-
                 </div>
 
-                <a href="https://www.sciencedirect.com/science/article/pii/S1130862126000033"
-                   target="_blank"
-                   class="detalle-fuente"
-                   id="tp-estudio">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1130862126000033" target="_blank" class="detalle-fuente" id="tp-estudio">
                     LEER EL ESTUDIO COMPLETO
                 </a>
-
             </div>
-
 
             <div class="detalle-hero-derecha">
-
-                <img src="js_muestra.png"
-                     alt="TriPage JS triage logic"
-                     class="detalle-codigo-img">
-
-                <p class="detalle-codigo-caption" id="tp-caption">
-                    Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto
-                </p>
-
+                <img src="js_muestra.png" alt="TriPage JS triage logic" class="detalle-codigo-img">
+                <p class="detalle-codigo-caption" id="tp-caption">Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto</p>
                 <section class="detalle-links">
-
-                    <a href="https://github.com/oliverx288/tripage"
-                       target="_blank"
-                       class="detalle-link-btn">
+                    <a href="https://github.com/oliverx288/tripage" target="_blank" class="detalle-link-btn">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-
-                    <a href="https://tripage.vercel.app/"
-                       target="_blank"
-                       class="detalle-link-btn">
+                    <a href="https://tripage.vercel.app/" target="_blank" class="detalle-link-btn">
                         <i class="fas fa-external-link-alt"></i> Live demo
                     </a>
-
                 </section>
-
             </div>
-
         </section>
-
-
-        <!-- CAPTURAS -->
-
-        <section class="detalle-capturas">
-
-            <img src="tri_page1.png"
-                 alt="TriPage screen 1"
-                 class="detalle-captura">
-
-            <img src="tri_page2.png"
-                 alt="TriPage screen 2"
-                 class="detalle-captura">
-
-        </section>
-
 
         <!-- POR QUÉ CONSTRUÍ TRIPAGE + PROCESO -->
-
         <section class="detalle-secciones-grid">
 
             <!-- POR QUÉ CONSTRUÍ TRIPAGE -->
-
-            <div class="detalle-seccion">
-
+            <div class="detalle-seccion-caja">
                 <p class="detalle-seccion-label" id="tp-label-why">
                     ¿Por qué construí <span class="tripage-rojo">TriPage</span>?
                 </p>
 
-
-                <h3 class="tripage-mini-titulo" id="tp-mini-title1">
-                    Experiencia real
-                </h3>
-
-                <p class="detalle-seccion-texto" id="tp-texto-why-1">
-                    Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.
-                </p>
-
-
-                <h3 class="tripage-mini-titulo" id="tp-mini-title2">
-                    La experiencia no garantiza un triaje correcto
-                </h3>
-
-                <p class="detalle-seccion-texto" id="tp-texto-why-2">
-                    Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.
-                </p>
-
-
-                <!-- TÍTULO CON IMAGEN -->
-
-                <div class="tripage-titulo-con-imagen">
-
-                    <h3 class="tripage-mini-titulo" id="tp-mini-title3">
-                        Entrenar antes de enfrentarse a un caso real
-                    </h3>
-
-                    <img src="img_code.png"
-                         alt="Código de TriPage"
-                         class="tripage-mini-imagen">
-
+                <div class="tripage-razon">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="stethoscope"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo" id="tp-mini-title1">Experiencia real</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-why-1">Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.</p>
+                    </div>
                 </div>
 
-                <p class="detalle-seccion-texto" id="tp-texto-why-3">
-                    Practicar con casos simulados puede ayudar a mejorar.
-                </p>
+                <div class="tripage-razon">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="alert-circle"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo" id="tp-mini-title2">La experiencia no garantiza un triaje correcto</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-why-2">Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.</p>
+                    </div>
+                </div>
 
+                <div class="tripage-razon">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo" id="tp-mini-title3">Entrenar antes de enfrentarse a un caso real</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-why-3">Practicar con casos simulados puede ayudar a mejorar.</p>
+                    </div>
+                </div>
             </div>
 
-
             <!-- EL PROCESO -->
+            <div class="detalle-seccion-caja">
+                <p class="detalle-seccion-label" id="tp-label-process">El proceso</p>
 
-            <div class="detalle-seccion">
+                <div class="tripage-paso">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="search"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo">Investigación</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-process-1">Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.</p>
+                    </div>
+                </div>
 
-                <p class="detalle-seccion-label" id="tp-label-process">
-                    El proceso
-                </p>
+                <div class="tripage-paso-flecha">↓</div>
 
-                <p class="detalle-seccion-texto tripage-proceso-parrafo"
-                   id="tp-texto-process-1">
-                    Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.
-                </p>
+                <div class="tripage-paso">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="pencil-ruler"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo">Diseño</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-process-2">Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad. También hice benchmarking para ver qué herramientas existían y confirmar que no había nada similar.</p>
+                    </div>
+                </div>
 
-                <p class="detalle-seccion-texto tripage-proceso-parrafo"
-                   id="tp-texto-process-2">
-                    También hice un poco de benchmarking para ver qué herramientas existían. Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad.
-                </p>
+                <div class="tripage-paso-flecha">↓</div>
 
-                <p class="detalle-seccion-texto tripage-proceso-parrafo"
-                   id="tp-texto-process-3">
-                    Después hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.
-                </p>
-
+                <div class="tripage-paso">
+                    <div class="tripage-razon-icono">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="tripage-mini-titulo">Validación</h3>
+                        <p class="detalle-seccion-texto" id="tp-texto-process-3">Hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.</p>
+                    </div>
+                </div>
             </div>
 
         </section>
 
-
         <!-- ESTADO ACTUAL -->
-
-        <section class="detalle-seccion">
-
-            <p class="detalle-seccion-label" id="tp-label-status">
-                Estado actual
-            </p>
-
-            <p class="detalle-seccion-texto" id="tp-texto-status">
-                Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.
-            </p>
-
+        <section class="estado-actual">
+            <div class="estado-actual-izquierda">
+                <div class="estado-icono">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <div>
+                    <p class="detalle-seccion-label" id="tp-label-status">Estado actual</p>
+                    <p class="detalle-seccion-texto" id="tp-texto-status">Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.</p>
+                </div>
+            </div>
+            <div class="estado-actual-metricas">
+                <div class="estado-metrica-caja">
+                    <span class="estado-metrica-numero">50</span>
+                    <span class="estado-metrica-label" id="tp-label-casos">Casos clínicos</span>
+                </div>
+                <div class="estado-metrica-caja">
+                    <span class="estado-metrica-numero">2</span>
+                    <span class="estado-metrica-label" id="tp-label-idiomas">Idiomas</span>
+                </div>
+                <div class="estado-validacion">
+                    <div class="estado-metrica-badge">
+                        <span class="estado-badge-texto" id="tp-badge-validacion">En validación</span>
+                    </div>
+                    <span class="estado-metrica-label">con estudiantes de Medicina UPF</span>
+                </div>
+            </div>
         </section>
 
     </main>
 
-
     <script>
-
         const textos = {
-
             es: {
-
-                contexto: `
-                    Un estudio realizado en 7 hospitales de Asturias reveló que
-                    <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong>
-                    <br><br>
-                    Incluso las enfermeras más experimentadas cometen errores.
-                    <br><br>
-                    El entrenamiento mediante simulación sí mejora la precisión.
-                `,
-
+                contexto: `Un estudio realizado en 7 hospitales de Asturias reveló que <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong><br><br>Incluso las enfermeras más experimentadas cometen errores.<br><br>El entrenamiento mediante simulación sí mejora la precisión.`,
                 label1: "Pacientes clasificados como menos graves de lo que realmente eran",
-
                 label2: "Pacientes clasificados como más graves de lo que realmente eran",
-
                 label3: "Clasificaciones de triaje correctas",
-
                 label4: "Enfermeras que participaron en el estudio en 7 hospitales",
-
                 estudio: "LEER EL ESTUDIO COMPLETO",
-
                 caption: "Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto",
-
-
-                labelWhy: "¿Por qué construí <span class=\"tripage-rojo\">TriPage</span>",
-
+                labelWhy: "¿Por qué construí <span class=\"tripage-rojo\">TriPage</span>?",
                 miniTitle1: "Experiencia real",
-
                 miniTitle2: "La experiencia no garantiza un triaje correcto",
-
                 miniTitle3: "Entrenar antes de enfrentarse a un caso real",
-
-
-                textoWhy1:
-                    "Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.",
-
-                textoWhy2:
-                    "Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.",
-
-                textoWhy3:
-                    "Practicar con casos simulados puede ayudar a mejorar.",
-
-
+                textoWhy1: "Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.",
+                textoWhy2: "Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.",
+                textoWhy3: "Practicar con casos simulados puede ayudar a mejorar.",
                 labelProcess: "El proceso",
-
-                textoProcess1:
-                    "Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.",
-
-                textoProcess2:
-                    "También hice un poco de benchmarking para ver qué herramientas existían. Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad.",
-
-                textoProcess3:
-                    "Después hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.",
-
-
+                textoProcess1: "Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.",
+                textoProcess2: "Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad. También hice benchmarking para ver qué herramientas existían y confirmar que no había nada similar.",
+                textoProcess3: "Hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.",
                 labelStatus: "Estado actual",
-
-                textoStatus:
-                    "Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés."
-
+                textoStatus: "Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.",
+                labelCasos: "Casos clínicos",
+                labelIdiomas: "Idiomas",
+                badgeValidacion: "En validación"
             },
-
-
             en: {
-
-                contexto: `
-                    A study across 7 hospitals in Asturias found that
-                    <strong>1 in 10 triage classifications are incorrect.</strong>
-                    <br><br>
-                    Even the most experienced nurses make mistakes.
-                    <br><br>
-                    Simulation-based training improves accuracy.
-                `,
-
+                contexto: `A study across 7 hospitals in Asturias found that <strong>1 in 10 triage classifications are incorrect.</strong><br><br>Even the most experienced nurses make mistakes.<br><br>Simulation-based training improves accuracy.`,
                 label1: "Patients classified as less serious than they actually were",
-
                 label2: "Patients classified as more serious than they actually were",
-
                 label3: "Triage classifications that were correct",
-
                 label4: "Nurses who took part in the study across 7 hospitals",
-
                 estudio: "READ THE FULL STUDY",
-
                 caption: "Triage logic — comparing user response against the correct Manchester level",
-
-
-                labelWhy: "Why I built <span class=\"tripage-rojo\">TriPage</span>",
-
+                labelWhy: "Why I built <span class=\"tripage-rojo\">TriPage</span>?",
                 miniTitle1: "Real-world experience",
-
                 miniTitle2: "Experience doesn't guarantee accurate triage",
-
                 miniTitle3: "Train before facing a real case",
-
-
-                textoWhy1:
-                    "I studied nursing and experienced the importance of triage in emergency care during the COVID-19 pandemic.",
-
-                textoWhy2:
-                    "I discovered that even the most experienced professionals make classification errors.",
-
-                textoWhy3:
-                    "Practising with simulated cases can help improve.",
-
-
+                textoWhy1: "I studied nursing and experienced the importance of triage in emergency care during the COVID-19 pandemic.",
+                textoWhy2: "I discovered that even the most experienced professionals make classification errors.",
+                textoWhy3: "Practising with simulated cases can help improve.",
                 labelProcess: "The process",
-
-                textoProcess1:
-                    "I started on paper and made several sketches. I tried flashcards, random cases and different ways of organising the cases by clinical type.",
-
-                textoProcess2:
-                    "I also did some benchmarking to see what tools already existed. I realised that categorising by type gave users hints, so I decided to filter by difficulty instead.",
-
-                textoProcess3:
-                    "After that, I spoke with medicine students at Universitat Pompeu Fabra, who confirmed that it would be useful for preparing for the ECOE exam.",
-
-
+                textoProcess1: "I started on paper and made several sketches. I tried flashcards, random cases and different ways of organising the cases by clinical type.",
+                textoProcess2: "I realised that categorising by type gave users hints, so I decided to filter by difficulty instead. I also did benchmarking to see what tools already existed and confirm nothing similar was out there.",
+                textoProcess3: "I spoke with medicine students at Universitat Pompeu Fabra, who confirmed that it would be useful for preparing for the ECOE exam.",
                 labelStatus: "Current status",
-
-                textoStatus:
-                    "Currently in validation with medicine students at Universitat Pompeu Fabra. TriPage has 50 real clinical cases and is available in Spanish and English."
-
+                textoStatus: "Currently in validation with medicine students at Universitat Pompeu Fabra. TriPage has 50 real clinical cases and is available in Spanish and English.",
+                labelCasos: "Clinical cases",
+                labelIdiomas: "Languages",
+                badgeValidacion: "In validation"
             }
+        }
 
-        };
+        let idioma = "es"
 
+        document.querySelector(".idioma-portfolio-activo").addEventListener("click", () => {
+            idioma = idioma === "es" ? "en" : "es"
+            document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase()
+            document.getElementById("tp-contexto").innerHTML = textos[idioma].contexto
+            document.getElementById("tp-label1").textContent = textos[idioma].label1
+            document.getElementById("tp-label2").textContent = textos[idioma].label2
+            document.getElementById("tp-label3").textContent = textos[idioma].label3
+            document.getElementById("tp-label4").textContent = textos[idioma].label4
+            document.getElementById("tp-estudio").textContent = textos[idioma].estudio
+            document.getElementById("tp-caption").textContent = textos[idioma].caption
+            document.getElementById("tp-label-why").innerHTML = textos[idioma].labelWhy
+            document.getElementById("tp-mini-title1").textContent = textos[idioma].miniTitle1
+            document.getElementById("tp-mini-title2").textContent = textos[idioma].miniTitle2
+            document.getElementById("tp-mini-title3").textContent = textos[idioma].miniTitle3
+            document.getElementById("tp-texto-why-1").textContent = textos[idioma].textoWhy1
+            document.getElementById("tp-texto-why-2").textContent = textos[idioma].textoWhy2
+            document.getElementById("tp-texto-why-3").textContent = textos[idioma].textoWhy3
+            document.getElementById("tp-label-process").textContent = textos[idioma].labelProcess
+            document.getElementById("tp-texto-process-1").textContent = textos[idioma].textoProcess1
+            document.getElementById("tp-texto-process-2").textContent = textos[idioma].textoProcess2
+            document.getElementById("tp-texto-process-3").textContent = textos[idioma].textoProcess3
+            document.getElementById("tp-label-status").textContent = textos[idioma].labelStatus
+            document.getElementById("tp-texto-status").textContent = textos[idioma].textoStatus
+            document.getElementById("tp-label-casos").textContent = textos[idioma].labelCasos
+            document.getElementById("tp-label-idiomas").textContent = textos[idioma].labelIdiomas
+            document.getElementById("tp-badge-validacion").textContent = textos[idioma].badgeValidacion
+        })
 
-        let idioma = "es";
-
-
-        document
-            .querySelector(".idioma-portfolio-activo")
-            .addEventListener("click", () => {
-
-                idioma = idioma === "es" ? "en" : "es";
-
-                document
-                    .querySelector(".idioma-portfolio-activo")
-                    .textContent = idioma.toUpperCase();
-
-
-                document
-                    .getElementById("tp-contexto")
-                    .innerHTML = textos[idioma].contexto;
-
-
-                document
-                    .getElementById("tp-label1")
-                    .textContent = textos[idioma].label1;
-
-                document
-                    .getElementById("tp-label2")
-                    .textContent = textos[idioma].label2;
-
-                document
-                    .getElementById("tp-label3")
-                    .textContent = textos[idioma].label3;
-
-                document
-                    .getElementById("tp-label4")
-                    .textContent = textos[idioma].label4;
-
-
-                document
-                    .getElementById("tp-estudio")
-                    .textContent = textos[idioma].estudio;
-
-
-                document
-                    .getElementById("tp-caption")
-                    .textContent = textos[idioma].caption;
-
-
-                document
-                    .getElementById("tp-label-why")
-                    .innerHTML = textos[idioma].labelWhy;
-
-
-                document
-                    .getElementById("tp-mini-title1")
-                    .textContent = textos[idioma].miniTitle1;
-
-                document
-                    .getElementById("tp-mini-title2")
-                    .textContent = textos[idioma].miniTitle2;
-
-                document
-                    .getElementById("tp-mini-title3")
-                    .textContent = textos[idioma].miniTitle3;
-
-
-                document
-                    .getElementById("tp-texto-why-1")
-                    .textContent = textos[idioma].textoWhy1;
-
-                document
-                    .getElementById("tp-texto-why-2")
-                    .textContent = textos[idioma].textoWhy2;
-
-                document
-                    .getElementById("tp-texto-why-3")
-                    .textContent = textos[idioma].textoWhy3;
-
-
-                document
-                    .getElementById("tp-label-process")
-                    .textContent = textos[idioma].labelProcess;
-
-
-                document
-                    .getElementById("tp-texto-process-1")
-                    .textContent = textos[idioma].textoProcess1;
-
-                document
-                    .getElementById("tp-texto-process-2")
-                    .textContent = textos[idioma].textoProcess2;
-
-                document
-                    .getElementById("tp-texto-process-3")
-                    .textContent = textos[idioma].textoProcess3;
-
-
-                document
-                    .getElementById("tp-label-status")
-                    .textContent = textos[idioma].labelStatus;
-
-
-                document
-                    .getElementById("tp-texto-status")
-                    .textContent = textos[idioma].textoStatus;
-
-            });
-
-            // Renderizar los iconos de las estadísticas
-            lucide.createIcons();
-
+        lucide.createIcons()
     </script>
 
 </body>
