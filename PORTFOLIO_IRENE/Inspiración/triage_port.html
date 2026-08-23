@@ -9,166 +9,146 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .detalle-dato {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            background-color: #FEF2F2 !important;
-            border-radius: 16px;
-            padding: 16px;
-        }
-        .detalle-dato-icono {
-            width: 34px;
-            height: 34px;
-            min-width: 34px;
-            border-radius: 50%;
-            background: rgba(139, 38, 53, 0.1) !important;
-            color: #8B2635 !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1px;
-        }
-        .detalle-dato-icono svg {
-            width: 17px;
-            height: 17px;
-            stroke-width: 2;
-        }
-        .detalle-dato-contenido {
-            min-width: 0;
+        .detalle-contexto-puntos {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 12px;
         }
-        .detalle-secciones-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            align-items: stretch !important;
-        }
-        .tripage-razon {
+        .detalle-contexto-punto {
             display: flex;
-            gap: 16px;
-            align-items: flex-start;
+            gap: 12px;
+            align-items: center;
         }
-        .tripage-razon-icono {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-            border-radius: 12px;
-            background-color: rgba(139, 38, 53, 0.1);
-            color: #8B2635;
+        .detalle-contexto-icono {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border-radius: 6px;
+            background: rgba(74, 144, 217, 0.1);
+            color: #4A90D9;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .tripage-razon-icono svg {
-            width: 20px;
-            height: 20px;
+        .detalle-contexto-icono svg {
+            width: 12px;
+            height: 12px;
             stroke-width: 1.5;
         }
-        .tripage-mini-titulo {
-            font-size: 14px;
+        .porque-mockup {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            object-fit: contain;
+        }
+        .ia-logos {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .ia-logo {
+            height: 32px;
+            width: auto;
+        }
+        .ia-texto-simple {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .ia-bloque {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .ia-bloque-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .ia-bloque-icono {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            border-radius: 10px;
+            background: rgba(74, 144, 217, 0.1);
+            color: #4A90D9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ia-bloque-icono svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 1.5;
+        }
+        .ia-bloque-titulo {
+            font-size: 15px;
             font-weight: 700;
             font-family: 'DM Sans', sans-serif;
             color: #0D0D0D;
-            margin-bottom: 4px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .tripage-paso {
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-        .tripage-paso-flecha {
-            font-size: 20px;
-            color: #8B2635;
-            text-align: center;
-            opacity: 0.5;
-        }
-        .tripage-rojo {
-            color: #8B2635;
-        }
-        .estado-actual {
-            display: flex;
-            gap: 48px;
-            background:
-                radial-gradient(ellipse 42% 52% at 91% 4%, rgba(255, 73, 42, 0.90) 0%, rgba(255, 102, 72, 0.65) 25%, rgba(255, 142, 113, 0.32) 48%, transparent 75%),
-                radial-gradient(ellipse 28% 40% at 3% 94%, rgba(255, 173, 40, 0.85) 0%, rgba(255, 185, 70, 0.52) 30%, rgba(255, 205, 120, 0.20) 55%, transparent 78%),
-                #FFF9F2;
-            border-radius: 20px;
-            padding: 40px;
-            align-items: center;
-        }
-        .estado-actual-izquierda {
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
-            align-items: flex-start;
-            flex: 1.5;
-        }
-        .estado-icono {
-            width: 300px;
-            min-width: 60px;
-            border-radius: 12px;
-            background: rgba(139, 38, 53, 0.1);
-            color: #8B2635;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-self: stretch;
-        }
-        .estado-icono svg {
-            width: 32px;
-            height: 32px;
-            stroke-width: 1.5;
-        }
-        .estado-actual-metricas {
-            flex: 1;
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            justify-content: center;
-        }
-        .estado-metrica-caja {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 16px;
-            padding: 16px 24px;
-        }
-        .estado-metrica-numero {
-            font-size: 48px;
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-            color: #8B2635;
-            line-height: 1;
-        }
-        .estado-metrica-label {
-            font-size: 12px;
+        .ia-bloque-texto {
+            font-size: 16px;
             font-family: 'DM Sans', sans-serif;
             color: #6B6B6B;
-            text-align: center;
+            line-height: 1.7;
+            padding-left: 48px;
         }
-        .estado-validacion {
+        .testimonios-seccion {
             display: flex;
             flex-direction: column;
+            gap: 32px;
+        }
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .testimonio-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border: 1px solid rgba(43, 124, 184, 0.1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        .testimonio-estrellas {
+            color: #4A90D9;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .testimonio-linea {
+            width: 40px;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .testimonio-texto {
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+            color: #3A3A3A;
+            line-height: 1.7;
+            font-style: italic;
+            flex: 1;
+        }
+        .testimonio-autor {
+            display: flex;
+            gap: 12px;
             align-items: center;
-            gap: 4px;
         }
-        .estado-metrica-badge {
-            background-color: rgba(139, 38, 53, 0.1);
-            border-radius: 20px;
-            padding: 8px 16px;
-        }
-        .estado-badge-texto {
+        .testimonio-nombre {
             font-size: 14px;
             font-weight: 700;
             font-family: 'DM Sans', sans-serif;
-            color: #8B2635;
+            color: #171717;
+        }
+        .testimonio-universidad {
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+            color: #6B6B6B;
         }
     </style>
 </head>
@@ -198,44 +178,43 @@
                 <p class="detalle-datos-contexto" id="tp-contexto">
                     Un estudio realizado en 7 hospitales de Asturias reveló que
                     <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong>
-                    <br><br>
-                    Incluso las enfermeras más experimentadas cometen errores.
-                    <br><br>
-                    El entrenamiento mediante simulación sí mejora la precisión.
                 </p>
+
+                <div class="detalle-contexto-puntos">
+                    <div class="detalle-contexto-punto">
+                        <div class="detalle-contexto-icono">
+                            <i data-lucide="grip"></i>
+                        </div>
+                        <p id="tp-contexto-2">Incluso las enfermeras más experimentadas cometen errores.</p>
+                    </div>
+                    <div class="detalle-contexto-punto">
+                        <div class="detalle-contexto-icono">
+                            <i data-lucide="grip"></i>
+                        </div>
+                        <p id="tp-contexto-3">El entrenamiento mediante simulación sí mejora la precisión.</p>
+                    </div>
+                </div>
 
                 <div class="detalle-datos-grid">
                     <div class="detalle-dato">
-                        <div class="detalle-dato-icono">
-                            <i data-lucide="user-round-minus"></i>
-                        </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">10.1%</span>
                             <span class="detalle-dato-label" id="tp-label1">Pacientes clasificados como menos graves de lo que realmente eran</span>
                         </div>
                     </div>
                     <div class="detalle-dato">
-                        <div class="detalle-dato-icono">
-                            <i data-lucide="user-round-plus"></i>
-                        </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">6.3%</span>
                             <span class="detalle-dato-label" id="tp-label2">Pacientes clasificados como más graves de lo que realmente eran</span>
                         </div>
                     </div>
                     <div class="detalle-dato">
-                        <div class="detalle-dato-icono">
-                            <i data-lucide="shield-check"></i>
-                        </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">80%</span>
                             <span class="detalle-dato-label" id="tp-label3">Clasificaciones de triaje correctas</span>
                         </div>
                     </div>
                     <div class="detalle-dato">
-                        <div class="detalle-dato-icono">
-                            <i data-lucide="users-round"></i>
-                        </div>
                         <div class="detalle-dato-contenido">
                             <span class="detalle-dato-numero">100</span>
                             <span class="detalle-dato-label" id="tp-label4">Enfermeras que participaron en el estudio en 7 hospitales</span>
@@ -250,7 +229,7 @@
 
             <div class="detalle-hero-derecha">
                 <img src="js_muestra.png" alt="TriPage JS triage logic" class="detalle-codigo-img">
-                <p class="detalle-codigo-caption" id="tp-caption">Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto</p>
+                <p class="detalle-codigo-caption" id="tp-caption">Función que compara el nivel de triaje del usuario con el correcto</p>
                 <section class="detalle-links">
                     <a href="https://github.com/oliverx288/tripage" target="_blank" class="detalle-link-btn">
                         <i class="fab fa-github"></i> GitHub
@@ -262,112 +241,171 @@
             </div>
         </section>
 
-        <!-- POR QUÉ CONSTRUÍ TRIPAGE + PROCESO -->
-        <section class="detalle-secciones-grid">
-
-            <!-- POR QUÉ CONSTRUÍ TRIPAGE -->
-            <div class="detalle-seccion-caja">
-                <p class="detalle-seccion-label" id="tp-label-why">
-                    ¿Por qué construí <span class="tripage-rojo">TriPage</span>?
-                </p>
-
-                <div class="tripage-razon">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="stethoscope"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo" id="tp-mini-title1">Experiencia real</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-why-1">Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.</p>
-                    </div>
-                </div>
-
-                <div class="tripage-razon">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="alert-circle"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo" id="tp-mini-title2">La experiencia no garantiza un triaje correcto</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-why-2">Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.</p>
-                    </div>
-                </div>
-
-                <div class="tripage-razon">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="brain"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo" id="tp-mini-title3">Entrenar antes de enfrentarse a un caso real</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-why-3">Practicar con casos simulados puede ayudar a mejorar.</p>
-                    </div>
+        <!-- POR QUÉ CONSTRUÍ TRIPAGE -->
+        <div class="porque-seccion">
+            <div class="porque-header">
+                <div class="porque-header-izquierda">
+                    <h2 class="porque-titulo" id="tp-label-why">
+                        ¿Por qué construí <span class="tripage-rojo">TriPage</span>?
+                    </h2>
+                    <p class="porque-subtitulo" id="tp-texto-motivacion">
+                        Estudié enfermería y vi de cerca lo que pasa cuando urgencias colapsa. En una pandemia o catástrofe, el triaje determina quién recibe atención primero. Los datos lo confirman: <strong>el 16.4% de las clasificaciones son incorrectas</strong> y los años de experiencia no cambian ese número.
+                    </p>
                 </div>
             </div>
 
-            <!-- EL PROCESO -->
-            <div class="detalle-seccion-caja">
-                <p class="detalle-seccion-label" id="tp-label-process">El proceso</p>
-
-                <div class="tripage-paso">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="search"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo">Investigación</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-process-1">Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.</p>
-                    </div>
+            <div class="porque-cards">
+                <div class="porque-card">
+                    <h3 class="porque-card-titulo" id="tp-mini-title1">Experiencia real</h3>
+                    <p class="porque-card-texto" id="tp-texto-why-1">Durante el COVID-19 pude ver lo que ocurre cuando urgencias colapsa.</p>
                 </div>
-
-                <div class="tripage-paso-flecha">↓</div>
-
-                <div class="tripage-paso">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="pencil-ruler"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo">Diseño</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-process-2">Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad. También hice benchmarking para ver qué herramientas existían y confirmar que no había nada similar.</p>
-                    </div>
+                <div class="porque-card">
+                    <h3 class="porque-card-titulo" id="tp-mini-title2">La experiencia no garantiza un triaje correcto</h3>
+                    <p class="porque-card-texto" id="tp-texto-why-2">El estudio realizado demuestra que incluso los profesionales con más experiencia cometen errores. 16 de 100 enfermeras fallaron en el triaje.</p>
                 </div>
-
-                <div class="tripage-paso-flecha">↓</div>
-
-                <div class="tripage-paso">
-                    <div class="tripage-razon-icono">
-                        <i data-lucide="graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h3 class="tripage-mini-titulo">Validación</h3>
-                        <p class="detalle-seccion-texto" id="tp-texto-process-3">Hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.</p>
-                    </div>
+                <div class="porque-card">
+                    <h3 class="porque-card-titulo" id="tp-mini-title3">Entrenar antes de enfrentarse a un caso real</h3>
+                    <p class="porque-card-texto" id="tp-texto-why-3">El estudio confirma que la simulación sí mejora la precisión. Por eso construí TriPage, para que los profesionales puedan entrenar.</p>
                 </div>
             </div>
 
+            <img src="mock_tripage_completo.png" alt="TriPage mockup" class="porque-mockup">
+        </div>
+
+        <!-- EL PROCESO -->
+        <section class="proceso-seccion">
+            <p class="detalle-seccion-label" id="tp-label-process">El proceso</p>
+            <div class="proceso-pasos">
+
+                <div class="proceso-paso">
+                    <div class="proceso-circulo-exterior">
+                        <div class="proceso-circulo-interior">
+                            <i data-lucide="search"></i>
+                        </div>
+                    </div>
+                    <p class="proceso-paso-titulo">Investigación</p>
+                    <p class="proceso-paso-texto" id="tp-texto-process-1">Tras leer el estudio investigué qué herramientas existían para practicar el triaje Manchester. Al hacer benchmarking no encontré nada gratuito, realista y práctico.</p>
+                </div>
+
+                <div class="proceso-linea"></div>
+
+                <div class="proceso-paso">
+                    <div class="proceso-circulo-exterior">
+                        <div class="proceso-circulo-interior">
+                            <i data-lucide="pencil-ruler"></i>
+                        </div>
+                    </div>
+                    <p class="proceso-paso-titulo">Diseño</p>
+                    <p class="proceso-paso-texto" id="tp-texto-process-2">Empecé en papel probando distintas estructuras: flashcards, preguntas tipo test y casos aleatorios. Decidí filtrar por dificultad en vez de por tipo clínico.</p>
+                </div>
+
+                <div class="proceso-linea"></div>
+
+                <div class="proceso-paso">
+                    <div class="proceso-circulo-exterior">
+                        <div class="proceso-circulo-interior">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                    </div>
+                    <p class="proceso-paso-titulo">Validación</p>
+                    <p class="proceso-paso-texto" id="tp-texto-process-3">Le pedí feedback a enfermeras y estudiantes de la UPF. El resultado fue positivo y me ayudó a desarrollar el diseño final. También me ayudaron a validar los casos clínicos.</p>
+                </div>
+
+            </div>
         </section>
 
-        <!-- ESTADO ACTUAL -->
-        <section class="estado-actual">
-            <div class="estado-actual-izquierda">
-                <div class="estado-icono">
-                    <i data-lucide="trending-up"></i>
+        <!-- HERRAMIENTAS Y DESARROLLO -->
+        <div class="porque-seccion">
+            <h2 class="porque-titulo" id="tp-label-ia">Herramientas y desarrollo</h2>
+
+            <div class="ia-logos">
+                <img src="chatgpt-logo.svg" alt="ChatGPT" class="ia-logo">
+                <img src="claude-logo.svg" alt="Claude" class="ia-logo">
+            </div>
+
+            <div class="ia-texto-simple">
+                <div class="ia-bloque">
+                    <div class="ia-bloque-header">
+                        <div class="ia-bloque-icono"><i data-lucide="bug"></i></div>
+                        <p class="ia-bloque-titulo" id="tp-ia-title1">Debugging y refactoring</p>
+                    </div>
+                    <p class="ia-bloque-texto" id="tp-ia-texto1">Usé Claude para entender errores en la lógica del temporizador y el localStorage, y para revisar y limpiar el código. No para copiar soluciones, para entender qué fallaba y por qué.</p>
                 </div>
-                <div>
-                    <p class="detalle-seccion-label" id="tp-label-status">Estado actual</p>
-                    <p class="detalle-seccion-texto" id="tp-texto-status">Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.</p>
+                <div class="ia-bloque">
+                    <div class="ia-bloque-header">
+                        <div class="ia-bloque-icono"><i data-lucide="file-text"></i></div>
+                        <p class="ia-bloque-titulo" id="tp-ia-title2">Documentación</p>
+                    </div>
+                    <p class="ia-bloque-texto" id="tp-ia-texto2">Me ayudó a escribir el README del proyecto y a estructurar la documentación del código.</p>
+                </div>
+                <div class="ia-bloque">
+                    <div class="ia-bloque-header">
+                        <div class="ia-bloque-icono"><i data-lucide="layout-dashboard"></i></div>
+                        <p class="ia-bloque-titulo" id="tp-ia-title3">Exploración de diseño</p>
+                    </div>
+                    <p class="ia-bloque-texto" id="tp-ia-texto3">Usé ChatGPT para generar distintas versiones de layout, mockups y el logo del proyecto antes de ponerme a codificar. Vi qué quedaba mejor y tomé las decisiones finales desde ahí.</p>
                 </div>
             </div>
-            <div class="estado-actual-metricas">
-                <div class="estado-metrica-caja">
-                    <span class="estado-metrica-numero">50</span>
-                    <span class="estado-metrica-label" id="tp-label-casos">Casos clínicos</span>
-                </div>
-                <div class="estado-metrica-caja">
-                    <span class="estado-metrica-numero">2</span>
-                    <span class="estado-metrica-label" id="tp-label-idiomas">Idiomas</span>
-                </div>
-                <div class="estado-validacion">
-                    <div class="estado-metrica-badge">
-                        <span class="estado-badge-texto" id="tp-badge-validacion">En validación</span>
+        </div>
+
+        <!-- RESULTADOS Y APRENDIZAJE -->
+        <div class="porque-seccion">
+            <h2 class="porque-titulo" id="tp-label-resultados">Resultados y aprendizaje obtenidos</h2>
+
+            <div class="ia-texto-simple">
+                <div class="ia-bloque">
+                    <div class="ia-bloque-header">
+                        <div class="ia-bloque-icono"><i data-lucide="graduation-cap"></i></div>
+                        <p class="ia-bloque-titulo" id="tp-result-title1">Lo que aprendí</p>
                     </div>
-                    <span class="estado-metrica-label">con estudiantes de Medicina UPF</span>
+                    <p class="ia-bloque-texto" id="tp-result-texto1">Construir TriPage fue donde más aprendí. Tuve que aprender JavaScript de verdad para que funcionara, usar Git para no perderme, documentar para no olvidar lo que había hecho, e integrar IA en el desarrollo como una herramienta más.</p>
+                </div>
+                <div class="ia-bloque">
+                    <div class="ia-bloque-header">
+                        <div class="ia-bloque-icono"><i data-lucide="trending-up"></i></div>
+                        <p class="ia-bloque-titulo" id="tp-result-title2">Resultados obtenidos</p>
+                    </div>
+                    <p class="ia-bloque-texto" id="tp-result-texto2">El estudio confirma que el entrenamiento mediante simulación mejora la precisión en el triaje. Por eso TriPage está actualmente en validación con enfermeras y estudiantes de medicina de la UPF. Cuenta con 50 casos clínicos en español e inglés y el siguiente paso es reescribirlo en React.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIOS -->
+        <section class="testimonios-seccion">
+            <p class="detalle-seccion-label" id="tp-label-testimonios">Lo que dicen los usuarios</p>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-estrellas">★★★★</div>
+                    <p class="testimonio-texto" id="tp-test1">"El diseño es muy intuitivo y la interfaz muy interactiva. Se hace fácil practicar sin que se haga pesado."</p>
+                    <div class="testimonio-linea"></div>
+                    <div class="testimonio-autor">
+                        <div>
+                            <p class="testimonio-nombre">Alicia</p>
+                            <p class="testimonio-universidad">Estudiante de Medicina</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-estrellas">★★★★</div>
+                    <p class="testimonio-texto" id="tp-test2">"Para alguien como yo, que soy enfermera volante y paso por urgencias de vez en cuando, es muy útil para mantener el nivel."</p>
+                    <div class="testimonio-linea"></div>
+                    <div class="testimonio-autor">
+                        <div>
+                            <p class="testimonio-nombre">Ana Antón</p>
+                            <p class="testimonio-universidad">Enfermera</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-estrellas">★★★★</div>
+                    <p class="testimonio-texto" id="tp-test3">"Lo usaré para repasar el ECOE. Los casos son realistas y el nivel de dificultad está bien graduado."</p>
+                    <div class="testimonio-linea"></div>
+                    <div class="testimonio-autor">
+                        <div>
+                            <p class="testimonio-nombre">Marina</p>
+                            <p class="testimonio-universidad">Estudiante de Medicina</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -377,54 +415,82 @@
     <script>
         const textos = {
             es: {
-                contexto: `Un estudio realizado en 7 hospitales de Asturias reveló que <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong><br><br>Incluso las enfermeras más experimentadas cometen errores.<br><br>El entrenamiento mediante simulación sí mejora la precisión.`,
+                contexto: `Un estudio realizado en 7 hospitales de Asturias reveló que <strong>1 de cada 10 clasificaciones de triaje son incorrectas.</strong>`,
+                contexto2: "Incluso las enfermeras más experimentadas cometen errores.",
+                contexto3: "El entrenamiento mediante simulación sí mejora la precisión.",
                 label1: "Pacientes clasificados como menos graves de lo que realmente eran",
                 label2: "Pacientes clasificados como más graves de lo que realmente eran",
                 label3: "Clasificaciones de triaje correctas",
                 label4: "Enfermeras que participaron en el estudio en 7 hospitales",
                 estudio: "LEER EL ESTUDIO COMPLETO",
-                caption: "Lógica de triaje — comparando la respuesta del usuario con el nivel Manchester correcto",
+                caption: "Función que compara el nivel de triaje del usuario con el correcto",
                 labelWhy: "¿Por qué construí <span class=\"tripage-rojo\">TriPage</span>?",
+                textoMotivacion: "Estudié enfermería y vi de cerca lo que pasa cuando urgencias colapsa. En una pandemia o catástrofe, el triaje determina quién recibe atención primero. Los datos lo confirman: <strong>el 16.4% de las clasificaciones son incorrectas</strong> y los años de experiencia no cambian ese número.",
                 miniTitle1: "Experiencia real",
                 miniTitle2: "La experiencia no garantiza un triaje correcto",
                 miniTitle3: "Entrenar antes de enfrentarse a un caso real",
-                textoWhy1: "Estudié enfermería y viví durante la pandemia del COVID-19 la importancia del triaje en urgencias.",
-                textoWhy2: "Descubrí que incluso los profesionales con más experiencia cometen errores de clasificación.",
-                textoWhy3: "Practicar con casos simulados puede ayudar a mejorar.",
+                textoWhy1: "Durante el COVID-19 pude ver lo que ocurre cuando urgencias colapsa.",
+                textoWhy2: "El estudio realizado demuestra que incluso los profesionales con más experiencia cometen errores. 16 de 100 enfermeras fallaron en el triaje.",
+                textoWhy3: "El estudio confirma que la simulación sí mejora la precisión. Por eso construí TriPage, para que los profesionales puedan entrenar.",
                 labelProcess: "El proceso",
-                textoProcess1: "Empecé en papel e hice varios bocetos. Probé con flashcards, casos aleatorios y distintas formas de organizar los casos por tipo clínico.",
-                textoProcess2: "Me di cuenta de que categorizar por tipo daba pistas, así que decidí filtrar por dificultad. También hice benchmarking para ver qué herramientas existían y confirmar que no había nada similar.",
-                textoProcess3: "Hablé con estudiantes de medicina de la Universitat Pompeu Fabra, que confirmaron que les resultaría útil para preparar el examen ECOE.",
-                labelStatus: "Estado actual",
-                textoStatus: "Actualmente en validación con estudiantes de medicina de la Universitat Pompeu Fabra. TriPage cuenta con 50 casos clínicos reales y está disponible en español e inglés.",
-                labelCasos: "Casos clínicos",
-                labelIdiomas: "Idiomas",
-                badgeValidacion: "En validación"
+                textoProcess1: "Tras leer el estudio investigué qué herramientas existían para practicar el triaje Manchester. Al hacer benchmarking no encontré nada gratuito, realista y práctico.",
+                textoProcess2: "Empecé en papel probando distintas estructuras: flashcards, preguntas tipo test y casos aleatorios. Decidí filtrar por dificultad en vez de por tipo clínico.",
+                textoProcess3: "Le pedí feedback a enfermeras y estudiantes de la UPF. El resultado fue positivo y me ayudó a desarrollar el diseño final. También me ayudaron a validar los casos clínicos.",
+                labelIa: "Herramientas y desarrollo",
+                iaTitle1: "Debugging y refactoring",
+                iaTexto1: "Usé Claude para entender errores en la lógica del temporizador y el localStorage, y para revisar y limpiar el código. No para copiar soluciones, para entender qué fallaba y por qué.",
+                iaTitle2: "Documentación",
+                iaTexto2: "Me ayudó a escribir el README del proyecto y a estructurar la documentación del código.",
+                iaTitle3: "Exploración de diseño",
+                iaTexto3: "Usé ChatGPT para generar distintas versiones de layout, mockups y el logo del proyecto antes de ponerme a codificar. Vi qué quedaba mejor y tomé las decisiones finales desde ahí.",
+                labelResultados: "Resultados y aprendizaje obtenidos",
+                resultTitle1: "Lo que aprendí",
+                resultTexto1: "Construir TriPage fue donde más aprendí. Tuve que aprender JavaScript de verdad para que funcionara, usar Git para no perderme, documentar para no olvidar lo que había hecho, e integrar IA en el desarrollo como una herramienta más.",
+                resultTitle2: "Resultados obtenidos",
+                resultTexto2: "El estudio confirma que el entrenamiento mediante simulación mejora la precisión en el triaje. Por eso TriPage está actualmente en validación con enfermeras y estudiantes de medicina de la UPF. Cuenta con 50 casos clínicos en español e inglés y el siguiente paso es reescribirlo en React.",
+                labelTestimonios: "Lo que dicen los usuarios",
+                test1: '"El diseño es muy intuitivo y la interfaz muy interactiva. Se hace fácil practicar sin que se haga pesado."',
+                test2: '"Para alguien como yo, que soy enfermera volante y paso por urgencias de vez en cuando, es muy útil para mantener el nivel."',
+                test3: '"Lo usaré para repasar el ECOE. Los casos son realistas y el nivel de dificultad está bien graduado."'
             },
             en: {
-                contexto: `A study across 7 hospitals in Asturias found that <strong>1 in 10 triage classifications are incorrect.</strong><br><br>Even the most experienced nurses make mistakes.<br><br>Simulation-based training improves accuracy.`,
+                contexto: `A study across 7 hospitals in Asturias found that <strong>1 in 10 triage classifications are incorrect.</strong>`,
+                contexto2: "Even the most experienced nurses make mistakes.",
+                contexto3: "Simulation-based training improves accuracy.",
                 label1: "Patients classified as less serious than they actually were",
                 label2: "Patients classified as more serious than they actually were",
                 label3: "Triage classifications that were correct",
                 label4: "Nurses who took part in the study across 7 hospitals",
                 estudio: "READ THE FULL STUDY",
-                caption: "Triage logic — comparing user response against the correct Manchester level",
+                caption: "Function that compares the user's triage level with the correct one",
                 labelWhy: "Why I built <span class=\"tripage-rojo\">TriPage</span>?",
+                textoMotivacion: "I studied nursing and saw firsthand what happens when emergency services collapse. In a pandemic or disaster, triage determines who gets care first. The data confirms it: <strong>16.4% of classifications are incorrect</strong> and years of experience don't change that number.",
                 miniTitle1: "Real-world experience",
                 miniTitle2: "Experience doesn't guarantee accurate triage",
                 miniTitle3: "Train before facing a real case",
-                textoWhy1: "I studied nursing and experienced the importance of triage in emergency care during the COVID-19 pandemic.",
-                textoWhy2: "I discovered that even the most experienced professionals make classification errors.",
-                textoWhy3: "Practising with simulated cases can help improve.",
+                textoWhy1: "During COVID-19 I saw firsthand what happens when emergency services collapse.",
+                textoWhy2: "The study shows that even the most experienced professionals make mistakes. 16 out of 100 nurses failed in triage.",
+                textoWhy3: "The study confirms that simulation improves accuracy. That is why I built TriPage — so professionals can train before facing a real case.",
                 labelProcess: "The process",
-                textoProcess1: "I started on paper and made several sketches. I tried flashcards, random cases and different ways of organising the cases by clinical type.",
-                textoProcess2: "I realised that categorising by type gave users hints, so I decided to filter by difficulty instead. I also did benchmarking to see what tools already existed and confirm nothing similar was out there.",
-                textoProcess3: "I spoke with medicine students at Universitat Pompeu Fabra, who confirmed that it would be useful for preparing for the ECOE exam.",
-                labelStatus: "Current status",
-                textoStatus: "Currently in validation with medicine students at Universitat Pompeu Fabra. TriPage has 50 real clinical cases and is available in Spanish and English.",
-                labelCasos: "Clinical cases",
-                labelIdiomas: "Languages",
-                badgeValidacion: "In validation"
+                textoProcess1: "After reading the study I researched what tools existed to practise the Manchester triage. When doing benchmarking I found nothing free, realistic and practical.",
+                textoProcess2: "I started on paper testing different structures: flashcards, multiple choice questions and random cases. I decided to filter by difficulty instead of clinical type.",
+                textoProcess3: "I asked nurses and UPF students for feedback. The result was positive and helped me develop the final design. They also helped me validate the clinical cases.",
+                labelIa: "Tools and development",
+                iaTitle1: "Debugging and refactoring",
+                iaTexto1: "I used Claude to understand errors in the timer and localStorage logic, and to review and clean up the code. Not to copy solutions — to understand what was failing and why.",
+                iaTitle2: "Documentation",
+                iaTexto2: "It helped me write the project README and structure the code documentation.",
+                iaTitle3: "Design exploration",
+                iaTexto3: "I used ChatGPT to generate different layout versions, mockups and the project logo before starting to code. I saw what worked best and made the final decisions from there.",
+                labelResultados: "Results and learning obtained",
+                resultTitle1: "What I learned",
+                resultTexto1: "Building TriPage is where I learned the most. I had to learn JavaScript for real to make it work, use Git to stay organised, document everything so I wouldn't forget, and integrate AI into development as just another tool.",
+                resultTitle2: "Results obtained",
+                resultTexto2: "The study confirms that simulation-based training improves triage accuracy. That is why TriPage is currently being validated with nurses and medicine students at UPF. It has 50 clinical cases in Spanish and English and the next step is to rewrite it in React.",
+                labelTestimonios: "What users say",
+                test1: '"The design is very intuitive and the interface very interactive. It is easy to practise without it feeling heavy."',
+                test2: '"For someone like me, a floating nurse who occasionally works in emergency, it is very useful for keeping my skills up."',
+                test3: '"I will use it to revise for the ECOE. The cases are realistic and the difficulty levels are well graded."'
             }
         }
 
@@ -434,6 +500,8 @@
             idioma = idioma === "es" ? "en" : "es"
             document.querySelector(".idioma-portfolio-activo").textContent = idioma.toUpperCase()
             document.getElementById("tp-contexto").innerHTML = textos[idioma].contexto
+            document.getElementById("tp-contexto-2").textContent = textos[idioma].contexto2
+            document.getElementById("tp-contexto-3").textContent = textos[idioma].contexto3
             document.getElementById("tp-label1").textContent = textos[idioma].label1
             document.getElementById("tp-label2").textContent = textos[idioma].label2
             document.getElementById("tp-label3").textContent = textos[idioma].label3
@@ -441,6 +509,7 @@
             document.getElementById("tp-estudio").textContent = textos[idioma].estudio
             document.getElementById("tp-caption").textContent = textos[idioma].caption
             document.getElementById("tp-label-why").innerHTML = textos[idioma].labelWhy
+            document.getElementById("tp-texto-motivacion").innerHTML = textos[idioma].textoMotivacion
             document.getElementById("tp-mini-title1").textContent = textos[idioma].miniTitle1
             document.getElementById("tp-mini-title2").textContent = textos[idioma].miniTitle2
             document.getElementById("tp-mini-title3").textContent = textos[idioma].miniTitle3
@@ -451,11 +520,22 @@
             document.getElementById("tp-texto-process-1").textContent = textos[idioma].textoProcess1
             document.getElementById("tp-texto-process-2").textContent = textos[idioma].textoProcess2
             document.getElementById("tp-texto-process-3").textContent = textos[idioma].textoProcess3
-            document.getElementById("tp-label-status").textContent = textos[idioma].labelStatus
-            document.getElementById("tp-texto-status").textContent = textos[idioma].textoStatus
-            document.getElementById("tp-label-casos").textContent = textos[idioma].labelCasos
-            document.getElementById("tp-label-idiomas").textContent = textos[idioma].labelIdiomas
-            document.getElementById("tp-badge-validacion").textContent = textos[idioma].badgeValidacion
+            document.getElementById("tp-label-ia").textContent = textos[idioma].labelIa
+            document.getElementById("tp-ia-title1").textContent = textos[idioma].iaTitle1
+            document.getElementById("tp-ia-texto1").textContent = textos[idioma].iaTexto1
+            document.getElementById("tp-ia-title2").textContent = textos[idioma].iaTitle2
+            document.getElementById("tp-ia-texto2").textContent = textos[idioma].iaTexto2
+            document.getElementById("tp-ia-title3").textContent = textos[idioma].iaTitle3
+            document.getElementById("tp-ia-texto3").textContent = textos[idioma].iaTexto3
+            document.getElementById("tp-label-resultados").textContent = textos[idioma].labelResultados
+            document.getElementById("tp-result-title1").textContent = textos[idioma].resultTitle1
+            document.getElementById("tp-result-texto1").textContent = textos[idioma].resultTexto1
+            document.getElementById("tp-result-title2").textContent = textos[idioma].resultTitle2
+            document.getElementById("tp-result-texto2").textContent = textos[idioma].resultTexto2
+            document.getElementById("tp-label-testimonios").textContent = textos[idioma].labelTestimonios
+            document.getElementById("tp-test1").textContent = textos[idioma].test1
+            document.getElementById("tp-test2").textContent = textos[idioma].test2
+            document.getElementById("tp-test3").textContent = textos[idioma].test3
         })
 
         lucide.createIcons()
