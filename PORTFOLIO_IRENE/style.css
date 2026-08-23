@@ -184,15 +184,15 @@ body::after {
 }
 
 .proyectos-label {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     font-family: 'DM Sans', sans-serif;
     color: var(--color-naranja);
     margin: -8px 0 18px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     transform: translateX(-505px);
     width: 100px;
-    margin-left: -50px;
 }
 
 
@@ -355,6 +355,21 @@ body::after {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.stack-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.stack-label {
+    font-size:11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #6B6B6B;
+    text-align: center;
 }
 
 .stack-icon-pill i {

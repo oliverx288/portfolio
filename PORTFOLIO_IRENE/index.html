@@ -6,7 +6,7 @@
     <title>Irene Oliver Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
@@ -34,7 +34,6 @@
     <!-- Navegación lateral -->
     <div class="nav-dots">
         <span class="dot activo"></span>
-        <span class="dot"></span>
         <span class="dot"></span>
     </div>
 
@@ -100,16 +99,46 @@
 
         <!-- STACK -->
         <div class="stack-footer">
-            <div class="stack-icon-pill"><i class="devicon-html5-plain" style="color:#E34F26"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-css3-plain" style="color:#1572B6"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-javascript-plain" style="color:#E6C400"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-python-plain" style="color:#3776AB"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-java-plain" style="color:#E76F00"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-mysql-plain" style="color:#4479A1"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-linux-plain" style="color:#171717"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-git-plain" style="color:#F05032"></i></div>
-            <div class="stack-icon-pill"><i class="devicon-amazonwebservices-plain" style="color:#FF9900"></i></div>
-            <div class="stack-icon-pill"><img src="az900.png" alt="AZ-900" class="stack-footer-badge"></div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-html5-plain" style="color:#E34F26"></i></div>
+                <span class="stack-label">HTML</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-css3-plain" style="color:#1572B6"></i></div>
+                <span class="stack-label">CSS</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-javascript-plain" style="color:#E6C400"></i></div>
+                <span class="stack-label">JavaScript</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-python-plain" style="color:#3776AB"></i></div>
+                <span class="stack-label">Python</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-java-plain" style="color:#E76F00"></i></div>
+                <span class="stack-label">Java</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-mysql-plain" style="color:#4479A1"></i></div>
+                <span class="stack-label">MySQL</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-linux-plain" style="color:#171717"></i></div>
+                <span class="stack-label">Linux</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-git-plain" style="color:#F05032"></i></div>
+                <span class="stack-label">Git</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><i class="devicon-amazonwebservices-plain" style="color:#FF9900"></i></div>
+                <span class="stack-label">AWS</span>
+            </div>
+            <div class="stack-icon-wrapper">
+                <div class="stack-icon-pill"><img src="az900.png" alt="AZ-900" class="stack-footer-badge"></div>
+                <span class="stack-label">AZ-900</span>
+            </div>
         </div>
 
     </section>
@@ -127,8 +156,8 @@
                 desc:
                     "Entrenamiento de triaje clínico basado en el protocolo Manchester.",
                 viewproject: "VER PROYECTO",
-                proximamente: "Próximamente",
-                enDesarrollo: "Nuevo proyecto en desarrollo."
+                proximamente: "Proyecto AEMPS",
+                enDesarrollo: "Aplicación de consulta de problemas de suministro de medicamentos. En desarrollo: Fase 1."
             },
 
             en: {
@@ -140,8 +169,8 @@
                 desc:
                     "Clinical triage training based on the Manchester protocol.",
                 viewproject: "VIEW PROJECT",
-                proximamente: "Coming soon",
-                enDesarrollo: "New project in development."
+                proximamente: "AEMPS Project",
+                enDesarrollo: "Application for consulting medication supply problems. In development: Phase 1."
             }
         };
 
@@ -183,6 +212,7 @@
                     document.getElementById("texto-viewproject").textContent = textos[idioma].viewproject;
                     document.getElementById("texto-viewproject").href = "triage_port.html";
                     document.getElementById("proyecto-imagen").src = "macfoto_buena.png";
+                    document.getElementById("proyecto-imagen").style.display = "block";
 
                 }
 
@@ -193,18 +223,8 @@
                     document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente;
                     document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo;
                     document.getElementById("texto-viewproject").textContent = "";
-                    document.getElementById("proyecto-imagen").src = "";
-
-                }
-
-                /* PROYECTO 3 */
-                else if (i === 2) {
-
-                    document.getElementById("texto-aboutme").textContent = textos[idioma].aboutme;
-                    document.getElementById("proyecto-titulo").textContent = textos[idioma].proximamente;
-                    document.getElementById("texto-desc").textContent = textos[idioma].enDesarrollo;
-                    document.getElementById("texto-viewproject").textContent = "";
-                    document.getElementById("proyecto-imagen").src = "";
+                    document.getElementById("proyecto-imagen").src = "Logo_AEMPS.svg.webp";
+                    document.getElementById("proyecto-imagen").style.display = "block";
 
                 }
 
